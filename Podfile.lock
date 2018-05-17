@@ -12,45 +12,6 @@ PODS:
   - BoringSSL/Implementation (10.0):
     - BoringSSL/Interface (= 10.0)
   - BoringSSL/Interface (10.0)
-  - Braintree (4.14.0):
-    - Braintree/Card (= 4.14.0)
-    - Braintree/Core (= 4.14.0)
-    - Braintree/PayPal (= 4.14.0)
-    - Braintree/UI (= 4.14.0)
-  - Braintree/Apple-Pay (4.14.0):
-    - Braintree/Core
-  - Braintree/Card (4.14.0):
-    - Braintree/Core
-  - Braintree/Core (4.14.0)
-  - Braintree/PaymentFlow (4.14.0):
-    - Braintree/Card
-    - Braintree/Core
-  - Braintree/PayPal (4.14.0):
-    - Braintree/Core
-    - Braintree/PayPalOneTouch
-  - Braintree/PayPalDataCollector (4.14.0):
-    - Braintree/Core
-    - Braintree/PayPalUtils
-  - Braintree/PayPalOneTouch (4.14.0):
-    - Braintree/Core
-    - Braintree/PayPalDataCollector
-    - Braintree/PayPalUtils
-  - Braintree/PayPalUtils (4.14.0)
-  - Braintree/UI (4.14.0):
-    - Braintree/Card
-    - Braintree/Core
-  - Braintree/UnionPay (4.14.0):
-    - Braintree/Card
-    - Braintree/Core
-  - BraintreeDropIn (6.1.0):
-    - BraintreeDropIn/DropIn (= 6.1.0)
-  - BraintreeDropIn/DropIn (6.1.0):
-    - Braintree/Card (~> 4.11)
-    - Braintree/Core (~> 4.11)
-    - Braintree/PaymentFlow (~> 4.11)
-    - Braintree/UnionPay (~> 4.11)
-    - BraintreeDropIn/UIKit
-  - BraintreeDropIn/UIKit (6.1.0)
   - CardIO (5.4.1)
   - Cards (1.3.1):
     - Player
@@ -278,10 +239,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - Braintree
-  - Braintree/Apple-Pay
-  - Braintree/PayPal
-  - BraintreeDropIn
   - Cards
   - Cupcake
   - FCAlertView
@@ -319,8 +276,6 @@ SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: 32764dbaf5f5888cf51fbaa172a010126b41bcd4
-  Braintree: a538846b544c5785cb0040f86cc97079af74b950
-  BraintreeDropIn: 2e8bba4facf6cc925176637030454d8308223b95
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Cards: c5023eb5dfa9d81478535fa255a8060f4e0737e3
   Cupcake: a08c0d691ce8102e69694ec8873b4a0a622d9a4d
@@ -375,6 +330,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: c7be54e199ff3ea342fa92aea6a49365078f9416
+PODFILE CHECKSUM: 3bd2db7ef59ad8ab6e77ab34991c99dec9888f41
 
 COCOAPODS: 1.4.0
