@@ -1,0 +1,1129 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B0EAAB820A8F49B001E4B24 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAA520A8F499001E4B24 /* Stack.swift */; };
+		5B0EAAB920A8F49B001E4B24 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAA620A8F499001E4B24 /* Alert.swift */; };
+		5B0EAABA20A8F49B001E4B24 /* StaticTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAA720A8F499001E4B24 /* StaticTable.swift */; };
+		5B0EAABB20A8F49B001E4B24 /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAA820A8F499001E4B24 /* Str.swift */; };
+		5B0EAABC20A8F49B001E4B24 /* Img.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAA920A8F499001E4B24 /* Img.swift */; };
+		5B0EAABD20A8F49B001E4B24 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAAA20A8F49A001E4B24 /* TextView.swift */; };
+		5B0EAABE20A8F49B001E4B24 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAAB20A8F49A001E4B24 /* View.swift */; };
+		5B0EAABF20A8F49B001E4B24 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAAC20A8F49A001E4B24 /* Button.swift */; };
+		5B0EAAC020A8F49B001E4B24 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAAD20A8F49A001E4B24 /* Font.swift */; };
+		5B0EAAC120A8F49B001E4B24 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAAE20A8F49A001E4B24 /* Label.swift */; };
+		5B0EAAC220A8F49B001E4B24 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAAF20A8F49A001E4B24 /* TextField.swift */; };
+		5B0EAAC320A8F49B001E4B24 /* Cons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAB020A8F49A001E4B24 /* Cons.swift */; };
+		5B0EAAC420A8F49B001E4B24 /* AttStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAB220A8F49A001E4B24 /* AttStr.swift */; };
+		5B0EAAC520A8F49B001E4B24 /* CPKStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAB320A8F49A001E4B24 /* CPKStackView.swift */; };
+		5B0EAAC620A8F49B001E4B24 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAB420A8F49B001E4B24 /* Styles.swift */; };
+		5B0EAAC720A8F49B001E4B24 /* __Private__Implementations__.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAB520A8F49B001E4B24 /* __Private__Implementations__.swift */; };
+		5B0EAAC820A8F49B001E4B24 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAB620A8F49B001E4B24 /* Color.swift */; };
+		5B0EAAC920A8F49B001E4B24 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAAB720A8F49B001E4B24 /* ImageView.swift */; };
+		5B0EAACB20A8F504001E4B24 /* CarrinhoCompras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */; };
+		5B0EAACD20A8F530001E4B24 /* CarrinhoComprasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */; };
+		5B0EAACF20A8FC56001E4B24 /* appList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B0EAACE20A8FC56001E4B24 /* appList.plist */; };
+		5B13826120AA6EF90050998D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B13826020AA6EF90050998D /* Configuration.swift */; };
+		5B7DFF7F20ADEC26005FF98F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DFF7E20ADEC26005FF98F /* PaymentViewController.swift */; };
+		5B9263C1209E2D650014F61B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C0209E2D650014F61B /* AppDelegate.swift */; };
+		5B9263C3209E2D650014F61B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C2209E2D650014F61B /* ViewController.swift */; };
+		5B9263C6209E2D650014F61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9263C4209E2D650014F61B /* Main.storyboard */; };
+		5B9263C9209E2D650014F61B /* Sisma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C7209E2D650014F61B /* Sisma.xcdatamodeld */; };
+		5B9263CB209E2D670014F61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9263CA209E2D670014F61B /* Assets.xcassets */; };
+		5B9263D9209E2D680014F61B /* SismaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263D8209E2D680014F61B /* SismaTests.swift */; };
+		5B9263E4209E2D680014F61B /* SismaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263E3209E2D680014F61B /* SismaUITests.swift */; };
+		5B9263F2209E37BB0014F61B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B9263F1209E37BA0014F61B /* GoogleService-Info.plist */; };
+		5B9263F4209EA3FA0014F61B /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263F3209EA3FA0014F61B /* RoundButton.swift */; };
+		5B92640320A0B9560014F61B /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263F920A0B9540014F61B /* QRCodeReader.swift */; };
+		5B92640420A0B9560014F61B /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263FA20A0B9540014F61B /* QRCodeReaderViewControllerBuilder.swift */; };
+		5B92640520A0B9560014F61B /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263FB20A0B9550014F61B /* ReaderOverlayView.swift */; };
+		5B92640620A0B9560014F61B /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263FC20A0B9550014F61B /* QRCodeReaderResult.swift */; };
+		5B92640720A0B9560014F61B /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263FD20A0B9550014F61B /* QRCodeReaderViewController.swift */; };
+		5B92640820A0B9560014F61B /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263FE20A0B9550014F61B /* ToggleTorchButton.swift */; };
+		5B92640920A0B9560014F61B /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263FF20A0B9560014F61B /* QRCodeReaderViewControllerDelegate.swift */; };
+		5B92640A20A0B9560014F61B /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92640020A0B9560014F61B /* SwitchCameraButton.swift */; };
+		5B92640B20A0B9560014F61B /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92640120A0B9560014F61B /* QRCodeReaderViewContainer.swift */; };
+		5B92640C20A0B9560014F61B /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92640220A0B9560014F61B /* QRCodeReaderView.swift */; };
+		5B92640F20A0BA9C0014F61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B92640E20A0BA9C0014F61B /* LaunchScreen.storyboard */; };
+		5B92641120A0BE8D0014F61B /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92641020A0BE8D0014F61B /* QRCodeView.swift */; };
+		5B92641C20A231740014F61B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92641B20A231740014F61B /* CollectionViewCell.swift */; };
+		5B92641E20A232880014F61B /* Produtos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92641D20A232880014F61B /* Produtos.swift */; };
+		5B92642220A233AD0014F61B /* ProdutoListaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92642120A233AD0014F61B /* ProdutoListaView.swift */; };
+		5B92642420A2400D0014F61B /* RemoveProdutos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92642320A2400D0014F61B /* RemoveProdutos.swift */; };
+		5B92642C20A3460E0014F61B /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92642B20A3460D0014F61B /* DAO.swift */; };
+		5B92642E20A3CFF80014F61B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92642D20A3CFF80014F61B /* CardView.swift */; };
+		5B92643720A72D120014F61B /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92643620A72D120014F61B /* SwiftSpinner.swift */; };
+		9FEDF2F41BF643DC9085FE02 /* Pods_SismaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E86BC59913DA5C436CECDE /* Pods_SismaTests.framework */; };
+		A1C5ADF43F92C352CBACD392 /* Pods_SismaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2330E25AEBB1B94C7ADFEC3E /* Pods_SismaUITests.framework */; };
+		D2A6A3FF359A76A50387E679 /* Pods_Sisma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B0FD0F7A0D66C378B5A4C0 /* Pods_Sisma.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B9263D5209E2D680014F61B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B9263B5209E2D650014F61B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B9263BC209E2D650014F61B;
+			remoteInfo = Sisma;
+		};
+		5B9263E0209E2D680014F61B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B9263B5209E2D650014F61B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B9263BC209E2D650014F61B;
+			remoteInfo = Sisma;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05E86BC59913DA5C436CECDE /* Pods_SismaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SismaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C61F917D7BD18782E5A48B2 /* Pods-SismaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2330E25AEBB1B94C7ADFEC3E /* Pods_SismaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SismaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39E560C4362FA3030A8FDBCA /* Pods-Sisma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sisma.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sisma/Pods-Sisma.release.xcconfig"; sourceTree = "<group>"; };
+		4AB7B9C0612716BDA61A8C27 /* Pods-SismaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SismaUITests/Pods-SismaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B0EAAA520A8F499001E4B24 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		5B0EAAA620A8F499001E4B24 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		5B0EAAA720A8F499001E4B24 /* StaticTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTable.swift; sourceTree = "<group>"; };
+		5B0EAAA820A8F499001E4B24 /* Str.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
+		5B0EAAA920A8F499001E4B24 /* Img.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Img.swift; sourceTree = "<group>"; };
+		5B0EAAAA20A8F49A001E4B24 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		5B0EAAAB20A8F49A001E4B24 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		5B0EAAAC20A8F49A001E4B24 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		5B0EAAAD20A8F49A001E4B24 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		5B0EAAAE20A8F49A001E4B24 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		5B0EAAAF20A8F49A001E4B24 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		5B0EAAB020A8F49A001E4B24 /* Cons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cons.swift; sourceTree = "<group>"; };
+		5B0EAAB120A8F49A001E4B24 /* Cupcake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cupcake.h; sourceTree = "<group>"; };
+		5B0EAAB220A8F49A001E4B24 /* AttStr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttStr.swift; sourceTree = "<group>"; };
+		5B0EAAB320A8F49A001E4B24 /* CPKStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPKStackView.swift; sourceTree = "<group>"; };
+		5B0EAAB420A8F49B001E4B24 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		5B0EAAB520A8F49B001E4B24 /* __Private__Implementations__.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = __Private__Implementations__.swift; sourceTree = "<group>"; };
+		5B0EAAB620A8F49B001E4B24 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5B0EAAB720A8F49B001E4B24 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoCompras.swift; sourceTree = "<group>"; };
+		5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoComprasCell.swift; sourceTree = "<group>"; };
+		5B0EAACE20A8FC56001E4B24 /* appList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appList.plist; sourceTree = "<group>"; };
+		5B13826020AA6EF90050998D /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		5B7DFF7E20ADEC26005FF98F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		5B9263BD209E2D650014F61B /* Sisma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sisma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9263C0209E2D650014F61B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B9263C2209E2D650014F61B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B9263C5209E2D650014F61B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B9263C8209E2D650014F61B /* Sisma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sisma.xcdatamodel; sourceTree = "<group>"; };
+		5B9263CA209E2D670014F61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B9263CF209E2D680014F61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B9263D4209E2D680014F61B /* SismaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SismaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9263D8209E2D680014F61B /* SismaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SismaTests.swift; sourceTree = "<group>"; };
+		5B9263DA209E2D680014F61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B9263DF209E2D680014F61B /* SismaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SismaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9263E3209E2D680014F61B /* SismaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SismaUITests.swift; sourceTree = "<group>"; };
+		5B9263E5209E2D680014F61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B9263F1209E37BA0014F61B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B9263F3209EA3FA0014F61B /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		5B9263F920A0B9540014F61B /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
+		5B9263FA20A0B9540014F61B /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
+		5B9263FB20A0B9550014F61B /* ReaderOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderOverlayView.swift; sourceTree = "<group>"; };
+		5B9263FC20A0B9550014F61B /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderResult.swift; sourceTree = "<group>"; };
+		5B9263FD20A0B9550014F61B /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
+		5B9263FE20A0B9550014F61B /* ToggleTorchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleTorchButton.swift; sourceTree = "<group>"; };
+		5B9263FF20A0B9560014F61B /* QRCodeReaderViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewControllerDelegate.swift; sourceTree = "<group>"; };
+		5B92640020A0B9560014F61B /* SwitchCameraButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCameraButton.swift; sourceTree = "<group>"; };
+		5B92640120A0B9560014F61B /* QRCodeReaderViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewContainer.swift; sourceTree = "<group>"; };
+		5B92640220A0B9560014F61B /* QRCodeReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderView.swift; sourceTree = "<group>"; };
+		5B92640E20A0BA9C0014F61B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B92641020A0BE8D0014F61B /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		5B92641B20A231740014F61B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5B92641D20A232880014F61B /* Produtos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produtos.swift; sourceTree = "<group>"; };
+		5B92642120A233AD0014F61B /* ProdutoListaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoListaView.swift; sourceTree = "<group>"; };
+		5B92642320A2400D0014F61B /* RemoveProdutos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveProdutos.swift; sourceTree = "<group>"; };
+		5B92642B20A3460D0014F61B /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		5B92642D20A3CFF80014F61B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5B92643620A72D120014F61B /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		64003054E5B5DBCD24386251 /* Pods-SismaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SismaUITests/Pods-SismaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		70948ACC3D0DABFF5C5D88D9 /* Pods-SismaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests.release.xcconfig"; sourceTree = "<group>"; };
+		783862920D3CD090FE9EC528 /* Pods-Sisma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sisma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sisma/Pods-Sisma.debug.xcconfig"; sourceTree = "<group>"; };
+		91B0FD0F7A0D66C378B5A4C0 /* Pods_Sisma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sisma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B9263BA209E2D650014F61B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2A6A3FF359A76A50387E679 /* Pods_Sisma.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9263D1209E2D680014F61B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEDF2F41BF643DC9085FE02 /* Pods_SismaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9263DC209E2D680014F61B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C5ADF43F92C352CBACD392 /* Pods_SismaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B0EAAA420A8F481001E4B24 /* Cupcake */ = {
+			isa = PBXGroup;
+			children = (
+				5B0EAAB520A8F49B001E4B24 /* __Private__Implementations__.swift */,
+				5B0EAAA620A8F499001E4B24 /* Alert.swift */,
+				5B0EAAB220A8F49A001E4B24 /* AttStr.swift */,
+				5B0EAAAC20A8F49A001E4B24 /* Button.swift */,
+				5B0EAAB620A8F49B001E4B24 /* Color.swift */,
+				5B0EAAB020A8F49A001E4B24 /* Cons.swift */,
+				5B0EAAB320A8F49A001E4B24 /* CPKStackView.swift */,
+				5B0EAAB120A8F49A001E4B24 /* Cupcake.h */,
+				5B0EAAAD20A8F49A001E4B24 /* Font.swift */,
+				5B0EAAB720A8F49B001E4B24 /* ImageView.swift */,
+				5B0EAAA920A8F499001E4B24 /* Img.swift */,
+				5B0EAAAE20A8F49A001E4B24 /* Label.swift */,
+				5B0EAAA520A8F499001E4B24 /* Stack.swift */,
+				5B0EAAA720A8F499001E4B24 /* StaticTable.swift */,
+				5B0EAAA820A8F499001E4B24 /* Str.swift */,
+				5B0EAAB420A8F49B001E4B24 /* Styles.swift */,
+				5B0EAAAF20A8F49A001E4B24 /* TextField.swift */,
+				5B0EAAAA20A8F49A001E4B24 /* TextView.swift */,
+				5B0EAAAB20A8F49A001E4B24 /* View.swift */,
+			);
+			name = Cupcake;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5B9263B4209E2D650014F61B = {
+			isa = PBXGroup;
+			children = (
+				5B0EAAA420A8F481001E4B24 /* Cupcake */,
+				5B92640D20A0B9660014F61B /* QRCodeReader */,
+				5B9263BF209E2D650014F61B /* Sisma */,
+				5B9263D7209E2D680014F61B /* SismaTests */,
+				5B9263E2209E2D680014F61B /* SismaUITests */,
+				5B9263BE209E2D650014F61B /* Products */,
+				7682D0B9124F15B58302ED3E /* Pods */,
+				F30051AC354A6AD6EB18BDC7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B9263BE209E2D650014F61B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B9263BD209E2D650014F61B /* Sisma.app */,
+				5B9263D4209E2D680014F61B /* SismaTests.xctest */,
+				5B9263DF209E2D680014F61B /* SismaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B9263BF209E2D650014F61B /* Sisma */ = {
+			isa = PBXGroup;
+			children = (
+				5B92643520A72CF80014F61B /* Supporting Files */,
+				5B0EAACE20A8FC56001E4B24 /* appList.plist */,
+				5B9263C7209E2D650014F61B /* Sisma.xcdatamodeld */,
+				5B9263F1209E37BA0014F61B /* GoogleService-Info.plist */,
+				5B9263CF209E2D680014F61B /* Info.plist */,
+				5B92642520A2664B0014F61B /* Delegate */,
+				5B92641A20A231110014F61B /* Storyboard */,
+				5B92641920A230F10014F61B /* Model */,
+				5B92641820A230DA0014F61B /* ViewController */,
+			);
+			path = Sisma;
+			sourceTree = "<group>";
+		};
+		5B9263D7209E2D680014F61B /* SismaTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B9263D8209E2D680014F61B /* SismaTests.swift */,
+				5B9263DA209E2D680014F61B /* Info.plist */,
+			);
+			path = SismaTests;
+			sourceTree = "<group>";
+		};
+		5B9263E2209E2D680014F61B /* SismaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B9263E3209E2D680014F61B /* SismaUITests.swift */,
+				5B9263E5209E2D680014F61B /* Info.plist */,
+			);
+			path = SismaUITests;
+			sourceTree = "<group>";
+		};
+		5B92640D20A0B9660014F61B /* QRCodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				5B9263FC20A0B9550014F61B /* QRCodeReaderResult.swift */,
+				5B92640220A0B9560014F61B /* QRCodeReaderView.swift */,
+				5B92640120A0B9560014F61B /* QRCodeReaderViewContainer.swift */,
+				5B9263FD20A0B9550014F61B /* QRCodeReaderViewController.swift */,
+				5B9263FA20A0B9540014F61B /* QRCodeReaderViewControllerBuilder.swift */,
+				5B9263FF20A0B9560014F61B /* QRCodeReaderViewControllerDelegate.swift */,
+				5B9263FB20A0B9550014F61B /* ReaderOverlayView.swift */,
+				5B92640020A0B9560014F61B /* SwitchCameraButton.swift */,
+				5B9263FE20A0B9550014F61B /* ToggleTorchButton.swift */,
+				5B9263F920A0B9540014F61B /* QRCodeReader.swift */,
+			);
+			path = QRCodeReader;
+			sourceTree = "<group>";
+		};
+		5B92641820A230DA0014F61B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B92642120A233AD0014F61B /* ProdutoListaView.swift */,
+				5B9263C2209E2D650014F61B /* ViewController.swift */,
+				5B92641020A0BE8D0014F61B /* QRCodeView.swift */,
+				5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */,
+				5B7DFF7E20ADEC26005FF98F /* PaymentViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5B92641920A230F10014F61B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B92642320A2400D0014F61B /* RemoveProdutos.swift */,
+				5B9263F3209EA3FA0014F61B /* RoundButton.swift */,
+				5B92641B20A231740014F61B /* CollectionViewCell.swift */,
+				5B92641D20A232880014F61B /* Produtos.swift */,
+				5B92642B20A3460D0014F61B /* DAO.swift */,
+				5B92642D20A3CFF80014F61B /* CardView.swift */,
+				5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B92641A20A231110014F61B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5B9263CA209E2D670014F61B /* Assets.xcassets */,
+				5B92640E20A0BA9C0014F61B /* LaunchScreen.storyboard */,
+				5B9263C4209E2D650014F61B /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		5B92642520A2664B0014F61B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5B9263C0209E2D650014F61B /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		5B92643520A72CF80014F61B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B13826020AA6EF90050998D /* Configuration.swift */,
+				5B92643620A72D120014F61B /* SwiftSpinner.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7682D0B9124F15B58302ED3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				783862920D3CD090FE9EC528 /* Pods-Sisma.debug.xcconfig */,
+				39E560C4362FA3030A8FDBCA /* Pods-Sisma.release.xcconfig */,
+				0C61F917D7BD18782E5A48B2 /* Pods-SismaTests.debug.xcconfig */,
+				70948ACC3D0DABFF5C5D88D9 /* Pods-SismaTests.release.xcconfig */,
+				4AB7B9C0612716BDA61A8C27 /* Pods-SismaUITests.debug.xcconfig */,
+				64003054E5B5DBCD24386251 /* Pods-SismaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F30051AC354A6AD6EB18BDC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91B0FD0F7A0D66C378B5A4C0 /* Pods_Sisma.framework */,
+				05E86BC59913DA5C436CECDE /* Pods_SismaTests.framework */,
+				2330E25AEBB1B94C7ADFEC3E /* Pods_SismaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B9263BC209E2D650014F61B /* Sisma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B9263E8209E2D680014F61B /* Build configuration list for PBXNativeTarget "Sisma" */;
+			buildPhases = (
+				CBC9B0F00B7096C6B48F8D6C /* [CP] Check Pods Manifest.lock */,
+				5B9263B9209E2D650014F61B /* Sources */,
+				5B9263BA209E2D650014F61B /* Frameworks */,
+				5B9263BB209E2D650014F61B /* Resources */,
+				50F59C3584DCC1A435DBA799 /* [CP] Embed Pods Frameworks */,
+				5C92885F7423321052522F0D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sisma;
+			productName = Sisma;
+			productReference = 5B9263BD209E2D650014F61B /* Sisma.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B9263D3209E2D680014F61B /* SismaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B9263EB209E2D680014F61B /* Build configuration list for PBXNativeTarget "SismaTests" */;
+			buildPhases = (
+				343963142F0C00F44B30FCD6 /* [CP] Check Pods Manifest.lock */,
+				5B9263D0209E2D680014F61B /* Sources */,
+				5B9263D1209E2D680014F61B /* Frameworks */,
+				5B9263D2209E2D680014F61B /* Resources */,
+				88618B123686467FE0BD5481 /* [CP] Embed Pods Frameworks */,
+				811530ED101091D04AC3C96C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B9263D6209E2D680014F61B /* PBXTargetDependency */,
+			);
+			name = SismaTests;
+			productName = SismaTests;
+			productReference = 5B9263D4209E2D680014F61B /* SismaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B9263DE209E2D680014F61B /* SismaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B9263EE209E2D680014F61B /* Build configuration list for PBXNativeTarget "SismaUITests" */;
+			buildPhases = (
+				E666E78ACA64910D325DBD3D /* [CP] Check Pods Manifest.lock */,
+				5B9263DB209E2D680014F61B /* Sources */,
+				5B9263DC209E2D680014F61B /* Frameworks */,
+				5B9263DD209E2D680014F61B /* Resources */,
+				E638241A065572AC7801EE2C /* [CP] Embed Pods Frameworks */,
+				5F6541F711417AF7AB74BC04 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B9263E1209E2D680014F61B /* PBXTargetDependency */,
+			);
+			name = SismaUITests;
+			productName = SismaUITests;
+			productReference = 5B9263DF209E2D680014F61B /* SismaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B9263B5209E2D650014F61B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Rodrigo;
+				TargetAttributes = {
+					5B9263BC209E2D650014F61B = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					5B9263D3209E2D680014F61B = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5B9263BC209E2D650014F61B;
+					};
+					5B9263DE209E2D680014F61B = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5B9263BC209E2D650014F61B;
+					};
+				};
+			};
+			buildConfigurationList = 5B9263B8209E2D650014F61B /* Build configuration list for PBXProject "Sisma" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B9263B4209E2D650014F61B;
+			productRefGroup = 5B9263BE209E2D650014F61B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B9263BC209E2D650014F61B /* Sisma */,
+				5B9263D3209E2D680014F61B /* SismaTests */,
+				5B9263DE209E2D680014F61B /* SismaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B9263BB209E2D650014F61B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9263F2209E37BB0014F61B /* GoogleService-Info.plist in Resources */,
+				5B9263CB209E2D670014F61B /* Assets.xcassets in Resources */,
+				5B92640F20A0BA9C0014F61B /* LaunchScreen.storyboard in Resources */,
+				5B9263C6209E2D650014F61B /* Main.storyboard in Resources */,
+				5B0EAACF20A8FC56001E4B24 /* appList.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9263D2209E2D680014F61B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9263DD209E2D680014F61B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		343963142F0C00F44B30FCD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SismaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50F59C3584DCC1A435DBA799 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sisma/Pods-Sisma-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework",
+				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
+				"${BUILT_PRODUCTS_DIR}/Cupcake/Cupcake.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeDropIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cupcake.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sisma/Pods-Sisma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C92885F7423321052522F0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sisma/Pods-Sisma-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sisma/Pods-Sisma-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F6541F711417AF7AB74BC04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SismaUITests/Pods-SismaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		811530ED101091D04AC3C96C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88618B123686467FE0BD5481 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC9B0F00B7096C6B48F8D6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sisma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E638241A065572AC7801EE2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SismaUITests/Pods-SismaUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SismaUITests/Pods-SismaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E666E78ACA64910D325DBD3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SismaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B9263B9209E2D650014F61B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B92640420A0B9560014F61B /* QRCodeReaderViewControllerBuilder.swift in Sources */,
+				5B92640520A0B9560014F61B /* ReaderOverlayView.swift in Sources */,
+				5B0EAAC920A8F49B001E4B24 /* ImageView.swift in Sources */,
+				5B0EAABE20A8F49B001E4B24 /* View.swift in Sources */,
+				5B92640A20A0B9560014F61B /* SwitchCameraButton.swift in Sources */,
+				5B0EAAB920A8F49B001E4B24 /* Alert.swift in Sources */,
+				5B0EAABF20A8F49B001E4B24 /* Button.swift in Sources */,
+				5B92641C20A231740014F61B /* CollectionViewCell.swift in Sources */,
+				5B0EAAB820A8F49B001E4B24 /* Stack.swift in Sources */,
+				5B13826120AA6EF90050998D /* Configuration.swift in Sources */,
+				5B92642C20A3460E0014F61B /* DAO.swift in Sources */,
+				5B92642420A2400D0014F61B /* RemoveProdutos.swift in Sources */,
+				5B0EAABB20A8F49B001E4B24 /* Str.swift in Sources */,
+				5B92641120A0BE8D0014F61B /* QRCodeView.swift in Sources */,
+				5B92642E20A3CFF80014F61B /* CardView.swift in Sources */,
+				5B0EAAC820A8F49B001E4B24 /* Color.swift in Sources */,
+				5B0EAAC620A8F49B001E4B24 /* Styles.swift in Sources */,
+				5B92640C20A0B9560014F61B /* QRCodeReaderView.swift in Sources */,
+				5B9263F4209EA3FA0014F61B /* RoundButton.swift in Sources */,
+				5B92642220A233AD0014F61B /* ProdutoListaView.swift in Sources */,
+				5B0EAACB20A8F504001E4B24 /* CarrinhoCompras.swift in Sources */,
+				5B0EAACD20A8F530001E4B24 /* CarrinhoComprasCell.swift in Sources */,
+				5B9263C3209E2D650014F61B /* ViewController.swift in Sources */,
+				5B0EAAC420A8F49B001E4B24 /* AttStr.swift in Sources */,
+				5B0EAAC720A8F49B001E4B24 /* __Private__Implementations__.swift in Sources */,
+				5B9263C1209E2D650014F61B /* AppDelegate.swift in Sources */,
+				5B92640720A0B9560014F61B /* QRCodeReaderViewController.swift in Sources */,
+				5B92640620A0B9560014F61B /* QRCodeReaderResult.swift in Sources */,
+				5B92640320A0B9560014F61B /* QRCodeReader.swift in Sources */,
+				5B0EAABD20A8F49B001E4B24 /* TextView.swift in Sources */,
+				5B0EAABA20A8F49B001E4B24 /* StaticTable.swift in Sources */,
+				5B0EAAC220A8F49B001E4B24 /* TextField.swift in Sources */,
+				5B9263C9209E2D650014F61B /* Sisma.xcdatamodeld in Sources */,
+				5B92643720A72D120014F61B /* SwiftSpinner.swift in Sources */,
+				5B0EAAC120A8F49B001E4B24 /* Label.swift in Sources */,
+				5B0EAAC320A8F49B001E4B24 /* Cons.swift in Sources */,
+				5B92640B20A0B9560014F61B /* QRCodeReaderViewContainer.swift in Sources */,
+				5B0EAAC520A8F49B001E4B24 /* CPKStackView.swift in Sources */,
+				5B92640920A0B9560014F61B /* QRCodeReaderViewControllerDelegate.swift in Sources */,
+				5B7DFF7F20ADEC26005FF98F /* PaymentViewController.swift in Sources */,
+				5B0EAAC020A8F49B001E4B24 /* Font.swift in Sources */,
+				5B0EAABC20A8F49B001E4B24 /* Img.swift in Sources */,
+				5B92640820A0B9560014F61B /* ToggleTorchButton.swift in Sources */,
+				5B92641E20A232880014F61B /* Produtos.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9263D0209E2D680014F61B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9263D9209E2D680014F61B /* SismaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9263DB209E2D680014F61B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9263E4209E2D680014F61B /* SismaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B9263D6209E2D680014F61B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B9263BC209E2D650014F61B /* Sisma */;
+			targetProxy = 5B9263D5209E2D680014F61B /* PBXContainerItemProxy */;
+		};
+		5B9263E1209E2D680014F61B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B9263BC209E2D650014F61B /* Sisma */;
+			targetProxy = 5B9263E0209E2D680014F61B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B9263C4209E2D650014F61B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B9263C5209E2D650014F61B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B9263E6209E2D680014F61B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B9263E7209E2D680014F61B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B9263E9209E2D680014F61B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783862920D3CD090FE9EC528 /* Pods-Sisma.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = Sisma/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.Sisma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B9263EA209E2D680014F61B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39E560C4362FA3030A8FDBCA /* Pods-Sisma.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = Sisma/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.Sisma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B9263EC209E2D680014F61B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C61F917D7BD18782E5A48B2 /* Pods-SismaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = SismaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.SismaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sisma.app/Sisma";
+			};
+			name = Debug;
+		};
+		5B9263ED209E2D680014F61B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70948ACC3D0DABFF5C5D88D9 /* Pods-SismaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = SismaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.SismaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sisma.app/Sisma";
+			};
+			name = Release;
+		};
+		5B9263EF209E2D680014F61B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB7B9C0612716BDA61A8C27 /* Pods-SismaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = SismaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.SismaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sisma;
+			};
+			name = Debug;
+		};
+		5B9263F0209E2D680014F61B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64003054E5B5DBCD24386251 /* Pods-SismaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z42V6W967K;
+				INFOPLIST_FILE = SismaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.SismaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sisma;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B9263B8209E2D650014F61B /* Build configuration list for PBXProject "Sisma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B9263E6209E2D680014F61B /* Debug */,
+				5B9263E7209E2D680014F61B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B9263E8209E2D680014F61B /* Build configuration list for PBXNativeTarget "Sisma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B9263E9209E2D680014F61B /* Debug */,
+				5B9263EA209E2D680014F61B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B9263EB209E2D680014F61B /* Build configuration list for PBXNativeTarget "SismaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B9263EC209E2D680014F61B /* Debug */,
+				5B9263ED209E2D680014F61B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B9263EE209E2D680014F61B /* Build configuration list for PBXNativeTarget "SismaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B9263EF209E2D680014F61B /* Debug */,
+				5B9263F0209E2D680014F61B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5B9263C7209E2D650014F61B /* Sisma.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5B9263C8209E2D650014F61B /* Sisma.xcdatamodel */,
+			);
+			currentVersion = 5B9263C8209E2D650014F61B /* Sisma.xcdatamodel */;
+			path = Sisma.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5B9263B5209E2D650014F61B /* Project object */;
+}
