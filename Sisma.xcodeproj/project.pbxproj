@@ -29,7 +29,6 @@
 		5B0EAACD20A8F530001E4B24 /* CarrinhoComprasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */; };
 		5B0EAACF20A8FC56001E4B24 /* appList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B0EAACE20A8FC56001E4B24 /* appList.plist */; };
 		5B13826120AA6EF90050998D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B13826020AA6EF90050998D /* Configuration.swift */; };
-		5B7DFF7F20ADEC26005FF98F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DFF7E20ADEC26005FF98F /* PaymentViewController.swift */; };
 		5B9263C1209E2D650014F61B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C0209E2D650014F61B /* AppDelegate.swift */; };
 		5B9263C3209E2D650014F61B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C2209E2D650014F61B /* ViewController.swift */; };
 		5B9263C6209E2D650014F61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9263C4209E2D650014F61B /* Main.storyboard */; };
@@ -114,7 +113,6 @@
 		5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoComprasCell.swift; sourceTree = "<group>"; };
 		5B0EAACE20A8FC56001E4B24 /* appList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appList.plist; sourceTree = "<group>"; };
 		5B13826020AA6EF90050998D /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		5B7DFF7E20ADEC26005FF98F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		5B9263BD209E2D650014F61B /* Sisma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sisma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9263C0209E2D650014F61B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9263C2209E2D650014F61B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 				5B9263C2209E2D650014F61B /* ViewController.swift */,
 				5B92641020A0BE8D0014F61B /* QRCodeView.swift */,
 				5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */,
-				5B7DFF7E20ADEC26005FF98F /* PaymentViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -814,7 +811,6 @@
 				5B92640B20A0B9560014F61B /* QRCodeReaderViewContainer.swift in Sources */,
 				5B0EAAC520A8F49B001E4B24 /* CPKStackView.swift in Sources */,
 				5B92640920A0B9560014F61B /* QRCodeReaderViewControllerDelegate.swift in Sources */,
-				5B7DFF7F20ADEC26005FF98F /* PaymentViewController.swift in Sources */,
 				5B0EAAC020A8F49B001E4B24 /* Font.swift in Sources */,
 				5B0EAABC20A8F49B001E4B24 /* Img.swift in Sources */,
 				5B92640820A0B9560014F61B /* ToggleTorchButton.swift in Sources */,

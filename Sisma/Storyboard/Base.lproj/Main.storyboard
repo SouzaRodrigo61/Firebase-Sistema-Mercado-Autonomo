@@ -396,7 +396,7 @@
         <!--Ride Request View Controller-->
         <scene sceneID="myu-Q6-cBa">
             <objects>
-                <viewController storyboardIdentifier="RideRequestViewController" id="MXC-a4-nbD" customClass="RideRequestViewController" customModule="RocketRides" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RideRequestViewController" id="MXC-a4-nbD" customClass="RideRequestViewController" customModule="Sisma" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c0K-a5-B6e"/>
                         <viewControllerLayoutGuide type="bottom" id="eco-np-Lgr"/>
