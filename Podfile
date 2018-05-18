@@ -24,19 +24,15 @@ target 'Sisma' do
   
   
   pod 'QRCode'
-  pod 'SwiftyStoreKit'
   pod 'PromiseKit/CorePromise'
-  pod 'IGListKit'
-  pod 'PayPal-iOS-SDK'
   pod 'FoldingCell'
   pod 'StatusAlert'
   pod 'FCAlertView'
   pod 'Cards'
   pod 'SwiftMessages'
-  pod 'SwiftMessages'
   pod 'Cupcake'
-  
-  
+  pod 'Alamofire'
+  pod 'Stripe'
 
   target 'SismaTests' do
     inherit! :search_paths

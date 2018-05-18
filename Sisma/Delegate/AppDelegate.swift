@@ -11,6 +11,8 @@ import CoreData
 import Firebase
 import FBSDKCoreKit
 import GoogleSignIn
+import Stripe
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -18,6 +20,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
     static var checkerFG : Int = 0
     
+    /**
+     Fill in your Stripe publishable key here. This can be either your
+     test or live publishable key. The key should begin with "pk_".
+     
+     You can find your publishable key in the Stripe Dashboard after you've
+     signed up for an account.
+     
+     @see https://dashboard.stripe.com/account/apikeys
+     
+     If you'd like to use this app with https://rocketrides.io (see below),
+     you can use our test publishable key: "pk_test_hnUZptHh36jRUveejCXqRoVu".
+     */
+    private let publishableKey: String = "pk_test_6SrhR3uGobyX9Qu5NRO9kZ8A"
+    
+    /**
+     Fill in your backend URL here to try out the full payment experience
+     
+     Ex: "http://localhost:3000" if you're running the Node server locally,
+     or "https://rocketrides.io" to try the app using our hosted version.
+     */
+    private let baseURLString: String = "https://rocketrides.io"
+    
+    /**
+     Optionally, fill in your Apple Merchant identifier here to try out the
+     Apple Pay payment experience. We can use the "merchant.xyz" placeholder
+     here when testing in the iOS simulator.
+     
+     @see https://stripe.com/docs/apple-pay/apps
+     */
+    private let appleMerchantIdentifier: String = "merchant.xyz"
+    
+    override init() {
+        super.init()
+        
+        // Stripe payment configuration
+        STPPaymentConfiguration.shared().companyName = "Rocket Rides"
+        
+        if !publishableKey.isEmpty {
+            STPPaymentConfiguration.shared().publishableKey = publishableKey
+        }
+        
+        if !appleMerchantIdentifier.isEmpty {
+            STPPaymentConfiguration.shared().appleMerchantIdentifier = appleMerchantIdentifier
+        }
+        
+        // Stripe theme configuration
+        STPTheme.default().primaryBackgroundColor = .riderVeryLightGrayColor
+        STPTheme.default().primaryForegroundColor = .riderDarkBlueColor
+        STPTheme.default().secondaryForegroundColor = .riderDarkGrayColor
+        STPTheme.default().accentColor = .riderGreenColor
+        
+        // Main API client configuration
+        PaymentAPIClient.shared.baseURLString = baseURLString
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -34,10 +90,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any])
         -> Bool {
             switch AppDelegate.checkerFG {
-                case 1: return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, options: options)
-                case 0: return GIDSignIn.sharedInstance().handle(url,
-                            sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,annotation: [:])
-                default: return true
+            case 1: return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, options: options)
+            case 0: return GIDSignIn.sharedInstance().handle(url,
+                                                             sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,annotation: [:])
+            default: return true
             }
     }
     
@@ -73,7 +129,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             // Access the storyboard and fetch an instance of the view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewer")
-
+            
             // Then push that view controller onto the navigation stack
             let rootViewController = self.window!.rootViewController as! UINavigationController
             rootViewController.pushViewController(viewController, animated: true)
@@ -95,41 +151,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
-
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
-
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-
+    
     // MARK: - Core Data stack
-
+    
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
-        */
+         */
         let container = NSPersistentContainer(name: "Sisma")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
+                
                 /*
                  Typical reasons for an error here include:
                  * The parent directory does not exist, cannot be created, or disallows writing.
@@ -143,9 +199,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         })
         return container
     }()
-
+    
     // MARK: - Core Data Saving support
-
+    
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -159,6 +215,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
         }
     }
-
+    
 }
 

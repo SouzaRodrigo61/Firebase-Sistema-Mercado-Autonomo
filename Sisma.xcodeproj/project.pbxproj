@@ -58,6 +58,11 @@
 		5B92642C20A3460E0014F61B /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92642B20A3460D0014F61B /* DAO.swift */; };
 		5B92642E20A3CFF80014F61B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92642D20A3CFF80014F61B /* CardView.swift */; };
 		5B92643720A72D120014F61B /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92643620A72D120014F61B /* SwiftSpinner.swift */; };
+		5BEA788420AF4461003285A2 /* RocketPathOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA788020AF4461003285A2 /* RocketPathOverlay.swift */; };
+		5BEA788520AF4461003285A2 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA788120AF4461003285A2 /* UIColor+Palette.swift */; };
+		5BEA788620AF4461003285A2 /* UIAlertController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA788220AF4461003285A2 /* UIAlertController+Utility.swift */; };
+		5BEA788720AF4461003285A2 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA788320AF4461003285A2 /* UIView+Utility.swift */; };
+		5BEA788A20AF44EB003285A2 /* PaymentAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA788920AF44EB003285A2 /* PaymentAPIClient.swift */; };
 		9FEDF2F41BF643DC9085FE02 /* Pods_SismaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E86BC59913DA5C436CECDE /* Pods_SismaTests.framework */; };
 		A1C5ADF43F92C352CBACD392 /* Pods_SismaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2330E25AEBB1B94C7ADFEC3E /* Pods_SismaUITests.framework */; };
 		D2A6A3FF359A76A50387E679 /* Pods_Sisma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B0FD0F7A0D66C378B5A4C0 /* Pods_Sisma.framework */; };
@@ -144,6 +149,11 @@
 		5B92642B20A3460D0014F61B /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		5B92642D20A3CFF80014F61B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		5B92643620A72D120014F61B /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		5BEA788020AF4461003285A2 /* RocketPathOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketPathOverlay.swift; sourceTree = "<group>"; };
+		5BEA788120AF4461003285A2 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		5BEA788220AF4461003285A2 /* UIAlertController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Utility.swift"; sourceTree = "<group>"; };
+		5BEA788320AF4461003285A2 /* UIView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utility.swift"; sourceTree = "<group>"; };
+		5BEA788920AF44EB003285A2 /* PaymentAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentAPIClient.swift; sourceTree = "<group>"; };
 		64003054E5B5DBCD24386251 /* Pods-SismaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SismaUITests/Pods-SismaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		70948ACC3D0DABFF5C5D88D9 /* Pods-SismaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests.release.xcconfig"; sourceTree = "<group>"; };
 		783862920D3CD090FE9EC528 /* Pods-Sisma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sisma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sisma/Pods-Sisma.debug.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +242,8 @@
 		5B9263BF209E2D650014F61B /* Sisma */ = {
 			isa = PBXGroup;
 			children = (
+				5BEA788B20AF44F2003285A2 /* Payment */,
+				5BEA788820AF4470003285A2 /* Utility */,
 				5B92643520A72CF80014F61B /* Supporting Files */,
 				5B0EAACE20A8FC56001E4B24 /* appList.plist */,
 				5B9263C7209E2D650014F61B /* Sisma.xcdatamodeld */,
@@ -331,6 +343,25 @@
 				5B92643620A72D120014F61B /* SwiftSpinner.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BEA788820AF4470003285A2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5BEA788020AF4461003285A2 /* RocketPathOverlay.swift */,
+				5BEA788220AF4461003285A2 /* UIAlertController+Utility.swift */,
+				5BEA788120AF4461003285A2 /* UIColor+Palette.swift */,
+				5BEA788320AF4461003285A2 /* UIView+Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		5BEA788B20AF44F2003285A2 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				5BEA788920AF44EB003285A2 /* PaymentAPIClient.swift */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 		7682D0B9124F15B58302ED3E /* Pods */ = {
@@ -519,6 +550,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sisma/Pods-Sisma-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
@@ -530,15 +562,14 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -550,6 +581,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
@@ -561,15 +593,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -746,6 +777,7 @@
 				5B92640A20A0B9560014F61B /* SwitchCameraButton.swift in Sources */,
 				5B0EAAB920A8F49B001E4B24 /* Alert.swift in Sources */,
 				5B0EAABF20A8F49B001E4B24 /* Button.swift in Sources */,
+				5BEA788620AF4461003285A2 /* UIAlertController+Utility.swift in Sources */,
 				5B92641C20A231740014F61B /* CollectionViewCell.swift in Sources */,
 				5B0EAAB820A8F49B001E4B24 /* Stack.swift in Sources */,
 				5B13826120AA6EF90050998D /* Configuration.swift in Sources */,
@@ -761,9 +793,13 @@
 				5B92642220A233AD0014F61B /* ProdutoListaView.swift in Sources */,
 				5B0EAACB20A8F504001E4B24 /* CarrinhoCompras.swift in Sources */,
 				5B0EAACD20A8F530001E4B24 /* CarrinhoComprasCell.swift in Sources */,
+				5BEA788720AF4461003285A2 /* UIView+Utility.swift in Sources */,
 				5B9263C3209E2D650014F61B /* ViewController.swift in Sources */,
 				5B0EAAC420A8F49B001E4B24 /* AttStr.swift in Sources */,
+				5BEA788420AF4461003285A2 /* RocketPathOverlay.swift in Sources */,
+				5BEA788520AF4461003285A2 /* UIColor+Palette.swift in Sources */,
 				5B0EAAC720A8F49B001E4B24 /* __Private__Implementations__.swift in Sources */,
+				5BEA788A20AF44EB003285A2 /* PaymentAPIClient.swift in Sources */,
 				5B9263C1209E2D650014F61B /* AppDelegate.swift in Sources */,
 				5B92640720A0B9560014F61B /* QRCodeReaderViewController.swift in Sources */,
 				5B92640620A0B9560014F61B /* QRCodeReaderResult.swift in Sources */,
@@ -951,7 +987,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z42V6W967K;
 				INFOPLIST_FILE = Sisma/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.Sisma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -967,7 +1006,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z42V6W967K;
 				INFOPLIST_FILE = Sisma/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.Sisma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -984,7 +1026,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z42V6W967K;
 				INFOPLIST_FILE = SismaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.SismaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1002,7 +1048,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z42V6W967K;
 				INFOPLIST_FILE = SismaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.SismaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1019,7 +1069,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z42V6W967K;
 				INFOPLIST_FILE = SismaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.SismaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1036,7 +1090,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z42V6W967K;
 				INFOPLIST_FILE = SismaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigo.SismaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

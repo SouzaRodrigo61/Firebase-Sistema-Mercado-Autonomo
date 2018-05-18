@@ -7,18 +7,40 @@
 //
 
 import AVFoundation
+import StatusAlert
 import Foundation
 import Firebase
 import UIKit
+import Stripe
 
-class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate {
+class CarrinhoCompras: UIViewController,QRCodeReaderViewControllerDelegate {
     
     fileprivate let PAYMENT_VIEW_SEGUE_IDENTIFIER = "PaymentView"
     fileprivate let DATA_DOCUMENT_FIRESTORE = "COMPRAS"
     
+    private let customerContext: STPCustomerContext
+    private let paymentContext: STPPaymentContext
+    
+    @IBOutlet var paymentButton: UIButton!
+    @IBOutlet var priceButton: UIButton!
+    
+    let statusAlert = StatusAlert.instantiate(
+        withImage: UIImage(named: "Some image name"),
+        title: "StatusAlert title",
+        message: "Message to show beyond title",
+        canBePickedOrDismissed: true)
+    
     var appList: Array<Dictionary<String, Any>> = []
     var produtos : [Produtos] = []
     var precoProdutos : Int = 0;
+    
+    private var price = 0 {
+        didSet {
+            // Forward value to payment context
+            paymentContext.paymentAmount = price
+        }
+    }
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -38,8 +60,69 @@ class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate {
                 DAO().adicionaDados(docData: produto, data: data, document: (produto["title"] as? String)!)
             }
             
-            performSegue(withIdentifier: PAYMENT_VIEW_SEGUE_IDENTIFIER, sender: appList)
+//            performSegue(withIdentifier: PAYMENT_VIEW_SEGUE_IDENTIFIER, sender: appList)
+            presentPaymentMethodsViewController()
+//            statusAlert.showInKeyWindow()
         }
+    }
+    
+    private func presentPaymentMethodsViewController() {
+        guard !STPPaymentConfiguration.shared().publishableKey.isEmpty else {
+            // Present error immediately because publishable key needs to be set
+            let message = "Please assign a value to `publishableKey` before continuing. See `AppDelegate.swift`."
+            present(UIAlertController(message: message), animated: true)
+            return
+        }
+        
+        guard !PaymentAPIClient.shared.baseURLString.isEmpty else {
+            // Present error immediately because base url needs to be set
+            let message = "Please assign a value to `PaymentAPIClient.shared.baseURLString` before continuing. See `AppDelegate.swift`."
+            present(UIAlertController(message: message), animated: true)
+            return
+        }
+        
+        // Present the Stripe payment methods view controller to enter payment details
+        paymentContext.presentPaymentMethodsViewController()
+    }
+    
+    private func reloadPaymentButtonContent() {
+        guard let selectedPaymentMethod = paymentContext.selectedPaymentMethod else {
+            // Show default image, text, and color
+            paymentButton.setImage(#imageLiteral(resourceName: "Payment"), for: .normal)
+            paymentButton.setTitle("Payment", for: .normal)
+            paymentButton.setTitleColor(.riderGrayColor, for: .normal)
+            return
+        }
+        
+        // Show selected payment method image, label, and darker color
+        paymentButton.setImage(selectedPaymentMethod.image, for: .normal)
+        paymentButton.setTitle(selectedPaymentMethod.label, for: .normal)
+        paymentButton.setTitleColor(.riderDarkBlueColor, for: .normal)
+    }
+    
+    private func reloadPriceButtonContent() {
+        price = precoProdutos
+        
+        // Show formatted price text and darker color
+        let priceFormatter = NumberFormatter()
+        priceFormatter.numberStyle = .currency
+        priceFormatter.locale = Locale(identifier: "en_US")
+        
+        let priceString = priceFormatter.string(for: price)
+        priceButton.setTitle(priceString, for: .normal)
+        priceButton.setTitleColor(.riderDarkBlueColor, for: .normal)
+    }
+    
+    // MARK: Init
+    
+    required init?(coder aDecoder: NSCoder) {
+        customerContext = STPCustomerContext(keyProvider: PaymentAPIClient.shared)
+        paymentContext = STPPaymentContext(customerContext: customerContext)
+        
+        super.init(coder: aDecoder)
+        
+        paymentContext.delegate = self
+        paymentContext.hostViewController = self
     }
     
     func getCurrentTimeStamp(_ date: NSDate) -> String{
@@ -197,7 +280,7 @@ extension CarrinhoCompras {
                 
                 self.appList.append(dictionary)
                 self.tableView.reloadData()
-                
+                self.reloadPriceButtonContent()
 //                DAO().adicionaDados(docData: (jsonObject as? [String: Any])!, data: "CarrinhoCompras", document: identification)
             }
         }
@@ -243,4 +326,97 @@ extension CarrinhoCompras {
         
         dismiss(animated: true, completion: nil)
     }
+}
+
+extension CarrinhoCompras: STPPaymentContextDelegate{
+    func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
+        self.reloadPaymentButtonContent()
+        self.reloadPriceButtonContent()
+    }
+    
+    public func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
+        if let customerKeyError = error as? PaymentAPIClient.CustomerKeyError {
+            switch customerKeyError {
+            case .missingBaseURL:
+                // Fail silently until base url string is set
+                print("[ERROR]: Please assign a value to `MainAPIClient.shared.baseURLString` before continuing. See `AppDelegate.swift`.")
+            case .invalidResponse:
+                // Use customer key specific error message
+                print("[ERROR]: Missing or malformed response when attempting to `PaymentAPIClient.shared.createCustomerKey`. Please check internet connection and backend response formatting.");
+                
+                present(UIAlertController(message: "Could not retrieve customer information", retryHandler: { (action) in
+                    // Retry payment context loading
+                    paymentContext.retryLoading()
+                }), animated: true)
+            }
+        }
+        else {
+            // Use generic error message
+            print("[ERROR]: Unrecognized error while loading payment context: \(error)");
+            
+            present(UIAlertController(message: "Could not retrieve payment information", retryHandler: { (action) in
+                // Retry payment context loading
+                paymentContext.retryLoading()
+            }), animated: true)
+        }
+    }
+    
+    public func paymentContext(_ paymentContext: STPPaymentContext, didFinishWith status: STPPaymentStatus, error: Error?) {
+        switch status {
+        case .success:
+            // Animate active ride
+//            animateActiveRide()
+            print("Pagamento efetuado")
+        case .error:
+            // Present error to user
+            if let requestRideError = error as? PaymentAPIClient.RequestRideError {
+                switch requestRideError {
+                case .missingBaseURL:
+                    // Fail silently until base url string is set
+                    print("[ERROR]: Please assign a value to `MainAPIClient.shared.baseURLString` before continuing. See `AppDelegate.swift`.")
+                case .invalidResponse:
+                    // Missing response from backend
+                    print("[ERROR]: Missing or malformed response when attempting to `MainAPIClient.shared.requestRide`. Please check internet connection and backend response formatting.");
+                    present(UIAlertController(message: "Could not request ride"), animated: true)
+                }
+            }
+            else {
+                // Use generic error message
+                print("[ERROR]: Unrecognized error while finishing payment: \(String(describing: error))");
+                present(UIAlertController(message: "Could not request ride"), animated: true)
+            }
+            
+            // Reset ride request state
+        case .userCancellation:
+            // Reset ride request state
+            print("Pagamento não efetuado")
+        }
+    }
+    
+    public func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPErrorBlock) {
+        let source = paymentResult.source.stripeID
+        
+//        PaymentAPIClient.shared.requestRide(source: source, amount: price, currency: "usd") { [weak self] (ride, error) in
+//            guard let strongSelf = self else {
+//                // View controller was deallocated
+//                return
+//            }
+//
+//            guard error == nil else {
+//                // Error while requesting ride
+//                completion(error)
+//                return
+//            }
+//
+//            // Save ride info to display after payment finished
+//            strongSelf.rideRequestState = .active(ride!)
+//            completion(nil)
+//        }
+    }
+    
+    public func paymentContext(_ paymentContext: STPPaymentContext, didUpdateShippingAddress address: STPAddress, completion: @escaping STPShippingMethodsCompletionBlock) {
+        
+    }
+    
+    
 }

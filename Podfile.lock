@@ -12,7 +12,6 @@ PODS:
   - BoringSSL/Implementation (10.0):
     - BoringSSL/Interface (= 10.0)
   - BoringSSL/Interface (10.0)
-  - CardIO (5.4.1)
   - Cards (1.3.1):
     - Player
   - Cupcake (1.2.1)
@@ -192,11 +191,6 @@ PODS:
   - GTMSessionFetcher/Core (1.1.14)
   - GTMSessionFetcher/Full (1.1.14):
     - GTMSessionFetcher/Core (= 1.1.14)
-  - IGListKit (3.2.0):
-    - IGListKit/Default (= 3.2.0)
-  - IGListKit/Default (3.2.0):
-    - IGListKit/Diffing
-  - IGListKit/Diffing (3.2.0)
   - leveldb-library (1.20)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
@@ -208,12 +202,6 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - PayPal-iOS-SDK (2.18.1):
-    - PayPal-iOS-SDK/CardIO (= 2.18.1)
-    - PayPal-iOS-SDK/Core (= 2.18.1)
-  - PayPal-iOS-SDK/CardIO (2.18.1):
-    - CardIO (~> 5.4.1)
-  - PayPal-iOS-SDK/Core (2.18.1)
   - Player (0.8.4)
   - PromiseKit/CorePromise (6.2.3)
   - Protobuf (3.5.0)
@@ -230,14 +218,15 @@ PODS:
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
   - StatusAlert (0.10.1)
+  - Stripe (12.1.2)
   - SwiftMessages (4.1.0)
   - SwiftyJSON (4.0.0)
-  - SwiftyStoreKit (0.13.1)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Alamofire (~> 4.7)
   - Cards
   - Cupcake
@@ -258,9 +247,7 @@ DEPENDENCIES:
   - FirebaseUI/Facebook
   - FirebaseUI/Google
   - FoldingCell
-  - IGListKit
   - Moya (~> 11.0)
-  - PayPal-iOS-SDK
   - PromiseKit/CorePromise
   - QRCode
   - RxBlocking (~> 4.0)
@@ -268,15 +255,14 @@ DEPENDENCIES:
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
   - StatusAlert
+  - Stripe
   - SwiftMessages
   - SwiftyJSON (~> 4.0)
-  - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: 32764dbaf5f5888cf51fbaa172a010126b41bcd4
-  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Cards: c5023eb5dfa9d81478535fa255a8060f4e0737e3
   Cupcake: a08c0d691ce8102e69694ec8873b4a0a622d9a4d
   FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
@@ -308,11 +294,9 @@ SPEC CHECKSUMS:
   gRPC-RxLibrary: a41a4652d220f230ba1c0491a94ce2ee04c6180a
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
-  IGListKit: ffe6f98a728ab0250aceea22e7957aa5477c5048
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  PayPal-iOS-SDK: 10654cd111e911a9807bddb96fae81aacb8e9915
   Player: e45514e9e5fb8ff18f50eb2ba6f84dac9b6a0024
   PromiseKit: 62f37bb4900a9b0b7550d017e41497171d93face
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
@@ -324,12 +308,12 @@ SPEC CHECKSUMS:
   RxTest: e634f15fd2c2cd0e0120132ef7a4f7be69ad0393
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   StatusAlert: 123d79043ee371f0a57102b35e79e2c8c8684388
+  Stripe: 3230cdf8a8b0c04902e45e86f222fb82a926239c
   SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
-  SwiftyStoreKit: c36bb7841dd51a485ce5c38abf9e96fba988741f
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 3bd2db7ef59ad8ab6e77ab34991c99dec9888f41
+PODFILE CHECKSUM: ae2bf19c38ea0dab51456263c14dce973bf9f918
 
 COCOAPODS: 1.4.0
