@@ -17,6 +17,7 @@ target 'Sisma' do
   pod 'Firebase/Performance'
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
   pod 'FirebaseUI'
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
@@ -33,16 +34,16 @@ target 'Sisma' do
   pod 'Cupcake'
   pod 'Alamofire'
   pod 'Stripe'
+  
 
   target 'SismaTests' do
     inherit! :search_paths
     # Pods for testing
     
-    pod 'Moya',       '~> 11.0'
-    pod 'SwiftyJSON', '~>  4.0'
-    pod 'Alamofire',  '~>  4.7'
-    pod 'RxSwift',    '~>  4.0'
-    pod 'RxCocoa',    '~>  4.0'
+    pod 'Moya',          '~> 11.0'
+    pod 'SwiftyJSON',    '~>  4.0'
+    pod 'RxSwift',       '~>  4.0'
+    pod 'RxCocoa',       '~>  4.0'
   end
 
   target 'SismaUITests' do

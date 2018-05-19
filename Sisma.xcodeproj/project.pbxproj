@@ -28,7 +28,6 @@
 		5B0EAACB20A8F504001E4B24 /* CarrinhoCompras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */; };
 		5B0EAACD20A8F530001E4B24 /* CarrinhoComprasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */; };
 		5B0EAACF20A8FC56001E4B24 /* appList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B0EAACE20A8FC56001E4B24 /* appList.plist */; };
-		5B13826120AA6EF90050998D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B13826020AA6EF90050998D /* Configuration.swift */; };
 		5B9263C1209E2D650014F61B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C0209E2D650014F61B /* AppDelegate.swift */; };
 		5B9263C3209E2D650014F61B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C2209E2D650014F61B /* ViewController.swift */; };
 		5B9263C6209E2D650014F61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9263C4209E2D650014F61B /* Main.storyboard */; };
@@ -62,9 +61,15 @@
 		5BEA788620AF4461003285A2 /* UIAlertController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA788220AF4461003285A2 /* UIAlertController+Utility.swift */; };
 		5BEA788720AF4461003285A2 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA788320AF4461003285A2 /* UIView+Utility.swift */; };
 		5BEA788A20AF44EB003285A2 /* PaymentAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA788920AF44EB003285A2 /* PaymentAPIClient.swift */; };
+		5BEA78BD20B0760C003285A2 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BEA78BC20B0760C003285A2 /* Stripe.framework */; };
+		5BEA791820B0CD79003285A2 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA791720B0CD79003285A2 /* Configuration.swift */; };
+		5BEA791C20B0CD86003285A2 /* UITabBarControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA791920B0CD86003285A2 /* UITabBarControllerExtension.swift */; };
+		5BEA791D20B0CD86003285A2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA791A20B0CD86003285A2 /* UIColorExtension.swift */; };
+		5BEA791E20B0CD86003285A2 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA791B20B0CD86003285A2 /* UINavigationControllerExtension.swift */; };
+		5BEA792020B0CD95003285A2 /* ReceiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA791F20B0CD95003285A2 /* ReceiverViewController.swift */; };
 		9FEDF2F41BF643DC9085FE02 /* Pods_SismaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E86BC59913DA5C436CECDE /* Pods_SismaTests.framework */; };
 		A1C5ADF43F92C352CBACD392 /* Pods_SismaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2330E25AEBB1B94C7ADFEC3E /* Pods_SismaUITests.framework */; };
-		D2A6A3FF359A76A50387E679 /* Pods_Sisma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B0FD0F7A0D66C378B5A4C0 /* Pods_Sisma.framework */; };
+		D2A6A3FF359A76A50387E679 /* Pods_Sisma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B0FD0F7A0D66C378B5A4C0 /* Pods_Sisma.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +117,6 @@
 		5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoCompras.swift; sourceTree = "<group>"; };
 		5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoComprasCell.swift; sourceTree = "<group>"; };
 		5B0EAACE20A8FC56001E4B24 /* appList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appList.plist; sourceTree = "<group>"; };
-		5B13826020AA6EF90050998D /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		5B9263BD209E2D650014F61B /* Sisma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sisma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9263C0209E2D650014F61B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9263C2209E2D650014F61B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,14 @@
 		5BEA788220AF4461003285A2 /* UIAlertController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Utility.swift"; sourceTree = "<group>"; };
 		5BEA788320AF4461003285A2 /* UIView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utility.swift"; sourceTree = "<group>"; };
 		5BEA788920AF44EB003285A2 /* PaymentAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentAPIClient.swift; sourceTree = "<group>"; };
+		5BEA78BC20B0760C003285A2 /* Stripe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stripe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BEA78BE20B07614003285A2 /* EddystoneScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EddystoneScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BEA78C220B07A9F003285A2 /* SensorbergSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SensorbergSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BEA791720B0CD79003285A2 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		5BEA791920B0CD86003285A2 /* UITabBarControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtension.swift; sourceTree = "<group>"; };
+		5BEA791A20B0CD86003285A2 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		5BEA791B20B0CD86003285A2 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		5BEA791F20B0CD95003285A2 /* ReceiverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverViewController.swift; sourceTree = "<group>"; };
 		64003054E5B5DBCD24386251 /* Pods-SismaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SismaUITests/Pods-SismaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		70948ACC3D0DABFF5C5D88D9 /* Pods-SismaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests.release.xcconfig"; sourceTree = "<group>"; };
 		783862920D3CD090FE9EC528 /* Pods-Sisma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sisma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sisma/Pods-Sisma.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BEA78BD20B0760C003285A2 /* Stripe.framework in Frameworks */,
 				D2A6A3FF359A76A50387E679 /* Pods_Sisma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +253,7 @@
 		5B9263BF209E2D650014F61B /* Sisma */ = {
 			isa = PBXGroup;
 			children = (
+				5BEA790720B0BFC1003285A2 /* iBeacon */,
 				5BEA788B20AF44F2003285A2 /* Payment */,
 				5BEA788820AF4470003285A2 /* Utility */,
 				5B92643520A72CF80014F61B /* Supporting Files */,
@@ -293,6 +307,7 @@
 		5B92641820A230DA0014F61B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5BEA791F20B0CD95003285A2 /* ReceiverViewController.swift */,
 				5B92642120A233AD0014F61B /* ProdutoListaView.swift */,
 				5B9263C2209E2D650014F61B /* ViewController.swift */,
 				5B92641020A0BE8D0014F61B /* QRCodeView.swift */,
@@ -336,7 +351,6 @@
 		5B92643520A72CF80014F61B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5B13826020AA6EF90050998D /* Configuration.swift */,
 				5B92643620A72D120014F61B /* SwiftSpinner.swift */,
 			);
 			path = "Supporting Files";
@@ -361,6 +375,17 @@
 			path = Payment;
 			sourceTree = "<group>";
 		};
+		5BEA790720B0BFC1003285A2 /* iBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				5BEA791A20B0CD86003285A2 /* UIColorExtension.swift */,
+				5BEA791B20B0CD86003285A2 /* UINavigationControllerExtension.swift */,
+				5BEA791920B0CD86003285A2 /* UITabBarControllerExtension.swift */,
+				5BEA791720B0CD79003285A2 /* Configuration.swift */,
+			);
+			path = iBeacon;
+			sourceTree = "<group>";
+		};
 		7682D0B9124F15B58302ED3E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +402,9 @@
 		F30051AC354A6AD6EB18BDC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BEA78C220B07A9F003285A2 /* SensorbergSDK.framework */,
+				5BEA78BE20B07614003285A2 /* EddystoneScanner.framework */,
+				5BEA78BC20B0760C003285A2 /* Stripe.framework */,
 				91B0FD0F7A0D66C378B5A4C0 /* Pods_Sisma.framework */,
 				05E86BC59913DA5C436CECDE /* Pods_SismaTests.framework */,
 				2330E25AEBB1B94C7ADFEC3E /* Pods_SismaUITests.framework */,
@@ -416,7 +444,6 @@
 				5B9263D1209E2D680014F61B /* Frameworks */,
 				5B9263D2209E2D680014F61B /* Resources */,
 				88618B123686467FE0BD5481 /* [CP] Embed Pods Frameworks */,
-				811530ED101091D04AC3C96C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -437,7 +464,6 @@
 				5B9263DC209E2D680014F61B /* Frameworks */,
 				5B9263DD209E2D680014F61B /* Resources */,
 				E638241A065572AC7801EE2C /* [CP] Embed Pods Frameworks */,
-				5F6541F711417AF7AB74BC04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -461,6 +487,11 @@
 				TargetAttributes = {
 					5B9263BC209E2D650014F61B = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					5B9263D3209E2D680014F61B = {
 						CreatedOnToolsVersion = 9.3;
@@ -644,36 +675,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sisma/Pods-Sisma-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5F6541F711417AF7AB74BC04 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SismaUITests/Pods-SismaUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		811530ED101091D04AC3C96C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		88618B123686467FE0BD5481 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -770,19 +771,22 @@
 				5B92640420A0B9560014F61B /* QRCodeReaderViewControllerBuilder.swift in Sources */,
 				5B92640520A0B9560014F61B /* ReaderOverlayView.swift in Sources */,
 				5B0EAAC920A8F49B001E4B24 /* ImageView.swift in Sources */,
+				5BEA792020B0CD95003285A2 /* ReceiverViewController.swift in Sources */,
 				5B0EAABE20A8F49B001E4B24 /* View.swift in Sources */,
 				5B92640A20A0B9560014F61B /* SwitchCameraButton.swift in Sources */,
 				5B0EAAB920A8F49B001E4B24 /* Alert.swift in Sources */,
 				5B0EAABF20A8F49B001E4B24 /* Button.swift in Sources */,
 				5BEA788620AF4461003285A2 /* UIAlertController+Utility.swift in Sources */,
 				5B92641C20A231740014F61B /* CollectionViewCell.swift in Sources */,
+				5BEA791820B0CD79003285A2 /* Configuration.swift in Sources */,
 				5B0EAAB820A8F49B001E4B24 /* Stack.swift in Sources */,
-				5B13826120AA6EF90050998D /* Configuration.swift in Sources */,
 				5B92642C20A3460E0014F61B /* DAO.swift in Sources */,
 				5B92642420A2400D0014F61B /* RemoveProdutos.swift in Sources */,
 				5B0EAABB20A8F49B001E4B24 /* Str.swift in Sources */,
+				5BEA791E20B0CD86003285A2 /* UINavigationControllerExtension.swift in Sources */,
 				5B92641120A0BE8D0014F61B /* QRCodeView.swift in Sources */,
 				5B92642E20A3CFF80014F61B /* CardView.swift in Sources */,
+				5BEA791D20B0CD86003285A2 /* UIColorExtension.swift in Sources */,
 				5B0EAAC820A8F49B001E4B24 /* Color.swift in Sources */,
 				5B0EAAC620A8F49B001E4B24 /* Styles.swift in Sources */,
 				5B92640C20A0B9560014F61B /* QRCodeReaderView.swift in Sources */,
@@ -803,6 +807,7 @@
 				5B92640320A0B9560014F61B /* QRCodeReader.swift in Sources */,
 				5B0EAABD20A8F49B001E4B24 /* TextView.swift in Sources */,
 				5B0EAABA20A8F49B001E4B24 /* StaticTable.swift in Sources */,
+				5BEA791C20B0CD86003285A2 /* UITabBarControllerExtension.swift in Sources */,
 				5B0EAAC220A8F49B001E4B24 /* TextField.swift in Sources */,
 				5B9263C9209E2D650014F61B /* Sisma.xcdatamodeld in Sources */,
 				5B92643720A72D120014F61B /* SwiftSpinner.swift in Sources */,

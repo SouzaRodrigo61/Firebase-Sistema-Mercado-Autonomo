@@ -1,196 +1,200 @@
 PODS:
-  - Alamofire (4.7.1)
+  - Alamofire (4.7.2)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - BoringSSL (10.0):
-    - BoringSSL/Implementation (= 10.0)
-    - BoringSSL/Interface (= 10.0)
-  - BoringSSL/Implementation (10.0):
-    - BoringSSL/Interface (= 10.0)
-  - BoringSSL/Interface (10.0)
-  - Cards (1.3.1):
+  - BoringSSL (10.0.2):
+    - BoringSSL/Implementation (= 10.0.2)
+    - BoringSSL/Interface (= 10.0.2)
+  - BoringSSL/Implementation (10.0.2):
+    - BoringSSL/Interface (= 10.0.2)
+  - BoringSSL/Interface (10.0.2)
+  - Cards (1.3.2):
     - Player
-  - Cupcake (1.2.1)
-  - FBSDKCoreKit (4.31.1):
+  - Cupcake (1.2.2)
+  - FBSDKCoreKit (4.33.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.31.1):
+  - FBSDKLoginKit (4.33.0):
     - FBSDKCoreKit
   - FCAlertView (1.4.0)
-  - Firebase/AdMob (4.11.0):
+  - Firebase/AdMob (5.0.1):
     - Firebase/Core
-    - Google-Mobile-Ads-SDK (= 7.29.0)
-  - Firebase/Analytics (4.11.0):
+    - Google-Mobile-Ads-SDK (= 7.30.0)
+  - Firebase/Analytics (5.0.1):
     - Firebase/Core
-  - Firebase/Auth (4.11.0):
+  - Firebase/Auth (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseAuth (= 5.0.0)
+  - Firebase/Core (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.0.0)
+  - Firebase/CoreOnly (5.0.1):
+    - FirebaseCore (= 5.0.1)
+  - Firebase/Crash (5.0.1):
     - Firebase/Core
-    - FirebaseAuth (= 4.5.0)
-  - Firebase/Core (4.11.0):
-    - FirebaseAnalytics (= 4.1.0)
-    - FirebaseCore (= 4.0.18)
-  - Firebase/Crash (4.11.0):
+    - FirebaseCrash (= 3.0.0)
+  - Firebase/Database (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.0.0)
+  - Firebase/DynamicLinks (5.0.1):
     - Firebase/Core
-    - FirebaseCrash (= 2.0.2)
-  - Firebase/Database (4.11.0):
+    - FirebaseDynamicLinks (= 3.0.0)
+  - Firebase/Firestore (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseFirestore (= 0.12.1)
+  - Firebase/Messaging (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.0.0)
+  - Firebase/Performance (5.0.1):
     - Firebase/Core
-    - FirebaseDatabase (= 4.1.5)
-  - Firebase/DynamicLinks (4.11.0):
+    - FirebasePerformance (= 2.0.0)
+  - Firebase/RemoteConfig (5.0.1):
     - Firebase/Core
-    - FirebaseDynamicLinks (= 2.3.2)
-  - Firebase/Firestore (4.11.0):
-    - Firebase/Core
-    - FirebaseFirestore (= 0.10.4)
-  - Firebase/Messaging (4.11.0):
-    - Firebase/Core
-    - FirebaseMessaging (= 2.1.1)
-  - Firebase/Performance (4.11.0):
-    - Firebase/Core
-    - FirebasePerformance (= 1.1.2)
-  - Firebase/RemoteConfig (4.11.0):
-    - Firebase/Core
-    - FirebaseRemoteConfig (= 2.1.2)
-  - Firebase/Storage (4.11.0):
-    - Firebase/Core
-    - FirebaseStorage (= 2.1.3)
-  - FirebaseABTesting (1.0.0):
-    - FirebaseCore (~> 4.0)
-    - Protobuf (~> 3.1)
-  - FirebaseAnalytics (4.1.0):
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - FirebaseRemoteConfig (= 3.0.0)
+  - Firebase/Storage (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseStorage (= 3.0.0)
+  - FirebaseABTesting (2.0.0):
+    - FirebaseCore (~> 5.0)
+    - Protobuf (~> 3.5)
+  - FirebaseAnalytics (5.0.0):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
-  - FirebaseAuth (4.5.0):
-    - FirebaseAnalytics (~> 4.1)
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+  - FirebaseAuth (5.0.0):
+    - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (4.0.18):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCrash (2.0.2):
-    - FirebaseAnalytics (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
+  - FirebaseCore (5.0.1):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseCrash (3.0.0):
+    - FirebaseAnalytics (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-    - Protobuf (~> 3.1)
-  - FirebaseDatabase (4.1.5):
-    - FirebaseAnalytics (~> 4.1)
-    - FirebaseCore (~> 4.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - Protobuf (~> 3.5)
+  - FirebaseDatabase (5.0.0):
+    - FirebaseCore (~> 5.0)
     - leveldb-library (~> 1.18)
-  - FirebaseDynamicLinks (2.3.2):
-    - FirebaseAnalytics (~> 4.0)
-  - FirebaseFirestore (0.10.4):
-    - FirebaseAnalytics (~> 4.1)
-    - FirebaseCore (~> 4.0)
+  - FirebaseDynamicLinks (3.0.0):
+    - FirebaseAnalytics (~> 5.0)
+  - FirebaseFirestore (0.12.1):
+    - FirebaseCore (~> 5.0)
+    - FirebaseFirestore/abseil-cpp (= 0.12.1)
     - gRPC-ProtoRPC (~> 1.0)
     - leveldb-library (~> 1.18)
-    - Protobuf (~> 3.5)
-  - FirebaseInstanceID (2.0.10):
-    - FirebaseCore (~> 4.0)
-  - FirebaseMessaging (2.1.1):
-    - FirebaseAnalytics (~> 4.1)
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/Logger (~> 2.1)
-    - Protobuf (~> 3.5)
-  - FirebasePerformance (1.1.2):
-    - FirebaseAnalytics (~> 4.1)
-    - FirebaseInstanceID (~> 2.0)
-    - FirebaseSwizzlingUtilities (~> 1.0)
-    - GoogleToolboxForMac/Logger (~> 2.1)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-    - GTMSessionFetcher/Core (~> 1.1)
-    - Protobuf (~> 3.5)
-  - FirebaseRemoteConfig (2.1.2):
-    - FirebaseABTesting (~> 1.0)
-    - FirebaseAnalytics (~> 4.0)
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - Protobuf (~> 3.1)
-  - FirebaseStorage (2.1.3):
-    - FirebaseAnalytics (~> 4.1)
-    - FirebaseCore (~> 4.0)
+  - FirebaseFirestore/abseil-cpp (0.12.1):
+    - FirebaseCore (~> 5.0)
+    - gRPC-ProtoRPC (~> 1.0)
+    - leveldb-library (~> 1.18)
+    - Protobuf (~> 3.1)
+  - FirebaseInstanceID (3.0.0):
+    - FirebaseCore (~> 5.0)
+  - FirebaseMessaging (3.0.0):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
+  - FirebasePerformance (2.0.0):
+    - FirebaseAnalytics (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - FirebaseSwizzlingUtilities/ISASwizzling (~> 2.0)
+    - FirebaseSwizzlingUtilities/MethodSwizzling (~> 2.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseSwizzlingUtilities (1.0.0)
-  - FirebaseUI (4.5.5):
-    - FirebaseUI/All (= 4.5.5)
-  - FirebaseUI/All (4.5.5):
-    - FirebaseUI/Auth
-    - FirebaseUI/Database
-    - FirebaseUI/Facebook
-    - FirebaseUI/Firestore
-    - FirebaseUI/Google
-    - FirebaseUI/Phone
-    - FirebaseUI/Storage
-    - FirebaseUI/Twitter
-  - FirebaseUI/Auth (4.5.5):
-    - Firebase/Auth (~> 4.2)
-  - FirebaseUI/Database (4.5.5):
-    - Firebase/Database (~> 4.0)
-  - FirebaseUI/Facebook (4.5.5):
+    - Protobuf (~> 3.5)
+  - FirebaseRemoteConfig (3.0.0):
+    - FirebaseABTesting (~> 2.0)
+    - FirebaseAnalytics (~> 5.0)
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - Protobuf (~> 3.5)
+  - FirebaseStorage (3.0.0):
+    - FirebaseCore (~> 5.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseSwizzlingUtilities/ISASwizzling (2.0.0)
+  - FirebaseSwizzlingUtilities/MethodSwizzling (2.0.0):
+    - FirebaseCore (~> 5.0)
+  - FirebaseUI (5.0.0):
+    - FirebaseUI/Auth (= 5.0.0)
+    - FirebaseUI/Database (= 5.0.0)
+    - FirebaseUI/Facebook (= 5.0.0)
+    - FirebaseUI/Firestore (= 5.0.0)
+    - FirebaseUI/Google (= 5.0.0)
+    - FirebaseUI/Phone (= 5.0.0)
+    - FirebaseUI/Storage (= 5.0.0)
+    - FirebaseUI/Twitter (= 5.0.0)
+  - FirebaseUI/Auth (5.0.0):
+    - Firebase/Auth (~> 5.0)
+  - FirebaseUI/Database (5.0.0):
+    - Firebase/Database (~> 5.0)
+  - FirebaseUI/Facebook (5.0.0):
     - FBSDKLoginKit (~> 4.0)
     - FirebaseUI/Auth
-  - FirebaseUI/Firestore (4.5.5):
+  - FirebaseUI/Firestore (5.0.0):
     - Firebase/Firestore
-  - FirebaseUI/Google (4.5.5):
+  - FirebaseUI/Google (5.0.0):
     - FirebaseUI/Auth
     - GoogleSignIn (~> 4.0)
-  - FirebaseUI/Phone (4.5.5):
+  - FirebaseUI/Phone (5.0.0):
     - FirebaseUI/Auth
-  - FirebaseUI/Storage (4.5.5):
-    - Firebase/Storage (~> 4.0)
+  - FirebaseUI/Storage (5.0.0):
+    - Firebase/Storage (~> 5.0)
     - SDWebImage (~> 4.0)
-  - FirebaseUI/Twitter (4.5.5):
+  - FirebaseUI/Twitter (5.0.0):
     - FirebaseUI/Auth
     - TwitterKit (~> 3.0)
-  - FoldingCell (3.0.6)
-  - Google-Mobile-Ads-SDK (7.29.0)
+  - FoldingCell (3.1.1)
+  - Google-Mobile-Ads-SDK (7.30.0)
   - GoogleSignIn (4.1.2):
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
-    - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
     - GTMOAuth2 (~> 1.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - GoogleToolboxForMac/DebugUtils (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/Defines (2.1.3)
-  - GoogleToolboxForMac/Logger (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/NSData+zlib (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
-    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
-  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
-  - gRPC (1.10.0):
-    - gRPC-RxLibrary (= 1.10.0)
-    - gRPC/Main (= 1.10.0)
-  - gRPC-Core (1.10.0):
-    - gRPC-Core/Implementation (= 1.10.0)
-    - gRPC-Core/Interface (= 1.10.0)
-  - gRPC-Core/Implementation (1.10.0):
+  - GoogleToolboxForMac/DebugUtils (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4)":
+    - GoogleToolboxForMac/DebugUtils (= 2.1.4)
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
+  - gRPC (1.12.0):
+    - gRPC-RxLibrary (= 1.12.0)
+    - gRPC/Main (= 1.12.0)
+  - gRPC-Core (1.12.0):
+    - gRPC-Core/Implementation (= 1.12.0)
+    - gRPC-Core/Interface (= 1.12.0)
+  - gRPC-Core/Implementation (1.12.0):
     - BoringSSL (~> 10.0)
-    - gRPC-Core/Interface (= 1.10.0)
+    - gRPC-Core/Interface (= 1.12.0)
     - nanopb (~> 0.3)
-  - gRPC-Core/Interface (1.10.0)
-  - gRPC-ProtoRPC (1.10.0):
-    - gRPC (= 1.10.0)
-    - gRPC-RxLibrary (= 1.10.0)
+  - gRPC-Core/Interface (1.12.0)
+  - gRPC-ProtoRPC (1.12.0):
+    - gRPC (= 1.12.0)
+    - gRPC-RxLibrary (= 1.12.0)
     - Protobuf (~> 3.0)
-  - gRPC-RxLibrary (1.10.0)
-  - gRPC/Main (1.10.0):
-    - gRPC-Core (= 1.10.0)
-    - gRPC-RxLibrary (= 1.10.0)
+  - gRPC-RxLibrary (1.12.0)
+  - gRPC/Main (1.12.0):
+    - gRPC-Core (= 1.12.0)
+    - gRPC-RxLibrary (= 1.12.0)
   - GTMOAuth2 (1.1.6):
     - GTMSessionFetcher (~> 1.1)
-  - GTMSessionFetcher (1.1.14):
-    - GTMSessionFetcher/Full (= 1.1.14)
-  - GTMSessionFetcher/Core (1.1.14)
-  - GTMSessionFetcher/Full (1.1.14):
-    - GTMSessionFetcher/Core (= 1.1.14)
+  - GTMSessionFetcher (1.1.15):
+    - GTMSessionFetcher/Full (= 1.1.15)
+  - GTMSessionFetcher/Core (1.1.15)
+  - GTMSessionFetcher/Full (1.1.15):
+    - GTMSessionFetcher/Core (= 1.1.15)
   - leveldb-library (1.20)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
@@ -203,7 +207,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Player (0.8.4)
-  - PromiseKit/CorePromise (6.2.3)
+  - PromiseKit/CorePromise (6.2.7)
   - Protobuf (3.5.0)
   - QRCode (2.0)
   - Result (3.2.4)
@@ -218,16 +222,15 @@ PODS:
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
   - StatusAlert (0.10.1)
-  - Stripe (12.1.2)
-  - SwiftMessages (4.1.0)
-  - SwiftyJSON (4.0.0)
+  - Stripe (13.0.1)
+  - SwiftMessages (4.1.2)
+  - SwiftyJSON (4.1.0)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
   - Alamofire
-  - Alamofire (~> 4.7)
   - Cards
   - Cupcake
   - FCAlertView
@@ -238,6 +241,7 @@ DEPENDENCIES:
   - Firebase/Crash
   - Firebase/Database
   - Firebase/DynamicLinks
+  - Firebase/Firestore
   - Firebase/Messaging
   - Firebase/Performance
   - Firebase/RemoteConfig
@@ -259,46 +263,102 @@ DEPENDENCIES:
   - SwiftMessages
   - SwiftyJSON (~> 4.0)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Bolts
+    - BoringSSL
+    - Cards
+    - Cupcake
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FCAlertView
+    - Firebase
+    - FirebaseABTesting
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseCrash
+    - FirebaseDatabase
+    - FirebaseDynamicLinks
+    - FirebaseFirestore
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - FirebasePerformance
+    - FirebaseRemoteConfig
+    - FirebaseStorage
+    - FirebaseSwizzlingUtilities
+    - FirebaseUI
+    - FoldingCell
+    - Google-Mobile-Ads-SDK
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - gRPC
+    - gRPC-Core
+    - gRPC-ProtoRPC
+    - gRPC-RxLibrary
+    - GTMOAuth2
+    - GTMSessionFetcher
+    - leveldb-library
+    - Moya
+    - nanopb
+    - Player
+    - PromiseKit
+    - Protobuf
+    - QRCode
+    - Result
+    - RxBlocking
+    - RxCocoa
+    - RxSwift
+    - RxTest
+    - SDWebImage
+    - StatusAlert
+    - Stripe
+    - SwiftMessages
+    - SwiftyJSON
+    - TwitterCore
+    - TwitterKit
+
 SPEC CHECKSUMS:
-  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  BoringSSL: 32764dbaf5f5888cf51fbaa172a010126b41bcd4
-  Cards: c5023eb5dfa9d81478535fa255a8060f4e0737e3
-  Cupcake: a08c0d691ce8102e69694ec8873b4a0a622d9a4d
-  FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
-  FBSDKLoginKit: 99797ac39252fef6f72600b886f6ee60b4b29cab
+  BoringSSL: 60dd24df4af296bf41d78e5841dbb95d75f88c0d
+  Cards: 69e8c83deebd5ed5bad7062dba603ce76992f712
+  Cupcake: 969645a83f52f3e79c3582cb34c61f0f7e847f26
+  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
+  FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
   FCAlertView: fdddd63381898c1d1a5a20c9f084fbd2c6d12f8b
-  Firebase: cc13dfab1038c8b45d7903e01fc690451d6d0b24
-  FirebaseABTesting: d07d0ee833b842d5153549e4c7e2e2cb1c23a3f9
-  FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
-  FirebaseAuth: 147bf340a0706b44ca1753d6b41ebafd9687cfe6
-  FirebaseCore: b981f47e5254cbcfdeb483355300d743f6fcab2c
-  FirebaseCrash: cded0fc566c03651aea606a101bc156085f333ca
-  FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
-  FirebaseDynamicLinks: 38b68641d24e78d0277a9205d988ce22875d5a25
-  FirebaseFirestore: 796df79c29cf8ecf806564f4d347665bdafa6ef0
-  FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
-  FirebaseMessaging: db0e01c52ef7e1f42846431273558107d084ede4
-  FirebasePerformance: 96c831a9eaf8d2ddf8bb37a4a6f6dd1b4bfe929f
-  FirebaseRemoteConfig: df64ce784a45e9b9d4988030a59da6baede8bdb0
-  FirebaseStorage: 9a863a2bb96c406958eeff7c2f1dfa9f44c44a13
-  FirebaseSwizzlingUtilities: f1c49a5a372ac852c853722a5891a0a5e2344a6c
-  FirebaseUI: 7f149d40db1a67c459df16540256b66d8f8e8c70
-  FoldingCell: 4848ec8a2056d5751bfb710df14521fc64d48ad7
-  Google-Mobile-Ads-SDK: 375bbb821b3df2106c37b74f6b0a97576ddc5f6b
+  Firebase: d6861c2059d8c32d1e6dd8932e22ada346d90a3a
+  FirebaseABTesting: 1f50b8d50f5e3469eea54e7463a7b7fe221d1f5e
+  FirebaseAnalytics: 19812b49fa5f283dd6b23edf8a14b5d477029ab8
+  FirebaseAuth: acbeef02fe7c3a26624e309849f3fe30c84115af
+  FirebaseCore: cafc814b2d84fc8733f09e653041cc2165332ad7
+  FirebaseCrash: 8900571fd763fd5bdda04522ec53da979456e3ce
+  FirebaseDatabase: 697eb53e5b4fe7cd4fa8756c1f82a9fca011345f
+  FirebaseDynamicLinks: c70e8ef2f267f13459db89b8816b13a06b2278d2
+  FirebaseFirestore: f686b8e83f3cf8bbc37db6e98e01029a14f01f55
+  FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
+  FirebaseMessaging: f2360a966ecfb0d14facf0fbdf306efc2df0ddbe
+  FirebasePerformance: 1ec6c40e5dad2543ca4c4f25d15168bde6322c2c
+  FirebaseRemoteConfig: 3c57e4644bd6976b671ae0b725cd709f198bd1f5
+  FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
+  FirebaseSwizzlingUtilities: 6c22677c50d0b6f5f0dc637c1233f13694a3003f
+  FirebaseUI: 0e9ab15e00073e421890c755b6f2bd757605601f
+  FoldingCell: 238c33ae8d9cd655090c9c4c5ff32596cfd18c6e
+  Google-Mobile-Ads-SDK: 7404f68120ae8682afeb5af001fbf4aad731c78e
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
-  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
-  gRPC: f54f0e6d603052b4562447da442ce2ff30bcdacc
-  gRPC-Core: a030b1678ded49c88ec5ba7c90ee8ee5f47ec6e1
-  gRPC-ProtoRPC: 22712b23eb1bda656a59715fa5c1da0ea1493ea4
-  gRPC-RxLibrary: a41a4652d220f230ba1c0491a94ce2ee04c6180a
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  gRPC: 9362451032695e2dfb7bafcd3740e3a27939e4ff
+  gRPC-Core: 9696b220565b283e021cf2722d473a4a74b7622a
+  gRPC-ProtoRPC: a1bd56fb1991a8dae4581250d7259eddabb66779
+  gRPC-RxLibrary: 1ed5314e8b38cd6e55c9bfa048387136ae925ce9
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
-  GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
+  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Player: e45514e9e5fb8ff18f50eb2ba6f84dac9b6a0024
-  PromiseKit: 62f37bb4900a9b0b7550d017e41497171d93face
+  PromiseKit: 12b9d87748b170714247d8b2677146ca57e488f2
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
@@ -308,12 +368,12 @@ SPEC CHECKSUMS:
   RxTest: e634f15fd2c2cd0e0120132ef7a4f7be69ad0393
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   StatusAlert: 123d79043ee371f0a57102b35e79e2c8c8684388
-  Stripe: 3230cdf8a8b0c04902e45e86f222fb82a926239c
-  SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  Stripe: b3c69e4a269d5ae707916a090ee54b1f6011ccd9
+  SwiftMessages: d81f48c1f8b6bc1dbebdfffe11226f0344f937ca
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: ae2bf19c38ea0dab51456263c14dce973bf9f918
+PODFILE CHECKSUM: 16979baaa46044f85b00eec35b7308bad7810fad
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2

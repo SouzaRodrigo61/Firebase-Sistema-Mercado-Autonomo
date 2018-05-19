@@ -12,13 +12,15 @@ import Firebase
 import FBSDKCoreKit
 import GoogleSignIn
 import Stripe
+import CoreLocation
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLocationManagerDelegate {
     
     var window: UIWindow?
     static var checkerFG : Int = 0
+    private let locationManager: CLLocationManager = CLLocationManager()
     
     /**
      Fill in your Stripe publishable key here. This can be either your
@@ -81,6 +83,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        
+        let UUID: UUID = iBeaconConfiguration.uuid!
+        
+        let beaconRegion: CLBeaconRegion = CLBeaconRegion(proximityUUID: UUID, identifier: "tw.darktt.beaconDemo")
+        beaconRegion.notifyEntryStateOnDisplay = true
+        
+        self.locationManager.delegate = self
+        self.locationManager.startMonitoring(for: beaconRegion)
         
         return true
     }

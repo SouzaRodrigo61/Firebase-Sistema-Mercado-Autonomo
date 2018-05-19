@@ -36,13 +36,9 @@ class DAO {
     func getQueryOffLineNoWhereCase(data: String, document: String) -> [Produtos] {
         // Listen to metadata updates to receive a server snapshot even if
         // the data is the same as the cached data.
-        let options = QueryListenOptions()
-        options.includeQueryMetadataChanges(true)
-        
-        
         
         let query = db.collection(data)
-            .addSnapshotListener(options: options) { querySnapshot, error in
+            .addSnapshotListener { querySnapshot, error in
                 guard let snapshot = querySnapshot else {
                     print("Error retreiving snapshot: \(error!)")
                     return
