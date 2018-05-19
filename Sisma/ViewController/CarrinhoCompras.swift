@@ -24,6 +24,47 @@ class CarrinhoCompras: UIViewController,QRCodeReaderViewControllerDelegate {
     @IBOutlet var paymentButton: UIButton!
     @IBOutlet var priceButton: UIButton!
     
+    @IBAction func paymentButton(_ sender: Any) {
+        let now = NSDate()
+        let nowTimeStamp = getCurrentTimeStamp(now)
+        
+        let user = Auth.auth().currentUser
+        
+        if let user = user{
+            let uid = user.uid
+            
+            let data = (DATA_DOCUMENT_FIRESTORE + "_" + uid + "_" + nowTimeStamp)
+            
+            for produto in appList {
+                DAO().adicionaDados(docData: produto, data: data, document: (produto["title"] as? String)!)
+            }
+            
+            //            performSegue(withIdentifier: PAYMENT_VIEW_SEGUE_IDENTIFIER, sender: appList)
+            presentPaymentMethodsViewController()
+            //            statusAlert.showInKeyWindow()
+        }
+    }
+    @IBAction func priceButton(_ sender: Any) {
+        let now = NSDate()
+        let nowTimeStamp = getCurrentTimeStamp(now)
+        
+        let user = Auth.auth().currentUser
+        
+        if let user = user{
+            let uid = user.uid
+            
+            let data = (DATA_DOCUMENT_FIRESTORE + "_" + uid + "_" + nowTimeStamp)
+            
+            for produto in appList {
+                DAO().adicionaDados(docData: produto, data: data, document: (produto["title"] as? String)!)
+            }
+            
+            //            performSegue(withIdentifier: PAYMENT_VIEW_SEGUE_IDENTIFIER, sender: appList)
+            presentPaymentMethodsViewController()
+            //            statusAlert.showInKeyWindow()
+        }
+    }
+    
     let statusAlert = StatusAlert.instantiate(
         withImage: UIImage(named: "Some image name"),
         title: "StatusAlert title",
@@ -45,25 +86,8 @@ class CarrinhoCompras: UIViewController,QRCodeReaderViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func paymentActionButton(_ sender: Any) {
+        statusAlert.showInKeyWindow()
         
-        let now = NSDate()
-        let nowTimeStamp = getCurrentTimeStamp(now)
-        
-        let user = Auth.auth().currentUser
-        
-        if let user = user{
-            let uid = user.uid
-            
-            let data = (DATA_DOCUMENT_FIRESTORE + "_" + uid + "_" + nowTimeStamp)
-            
-            for produto in appList {
-                DAO().adicionaDados(docData: produto, data: data, document: (produto["title"] as? String)!)
-            }
-            
-//            performSegue(withIdentifier: PAYMENT_VIEW_SEGUE_IDENTIFIER, sender: appList)
-            presentPaymentMethodsViewController()
-//            statusAlert.showInKeyWindow()
-        }
     }
     
     private func presentPaymentMethodsViewController() {
