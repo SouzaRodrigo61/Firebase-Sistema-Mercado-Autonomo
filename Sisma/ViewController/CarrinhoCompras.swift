@@ -6,12 +6,13 @@
 //  Copyright © 2018 Rodrigo. All rights reserved.
 //
 
+import FirebaseFirestore
 import AVFoundation
 import StatusAlert
 import Foundation
 import Firebase
-import UIKit
 import Stripe
+import UIKit
 
 class CarrinhoCompras: UIViewController,QRCodeReaderViewControllerDelegate {
     
@@ -66,9 +67,9 @@ class CarrinhoCompras: UIViewController,QRCodeReaderViewControllerDelegate {
     }
     
     let statusAlert = StatusAlert.instantiate(
-        withImage: UIImage(named: "Some image name"),
-        title: "StatusAlert title",
-        message: "Message to show beyond title",
+        withImage: UIImage(named: "online-shop"),
+        title: "Pagamento realizado com sucesso",
+        message: "",
         canBePickedOrDismissed: true)
     
     var appList: Array<Dictionary<String, Any>> = []
