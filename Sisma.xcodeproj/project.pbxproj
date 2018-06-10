@@ -28,6 +28,7 @@
 		5B0EAACB20A8F504001E4B24 /* CarrinhoCompras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */; };
 		5B0EAACD20A8F530001E4B24 /* CarrinhoComprasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */; };
 		5B0EAACF20A8FC56001E4B24 /* appList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B0EAACE20A8FC56001E4B24 /* appList.plist */; };
+		5B300C4720CCB7EA004175CC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B300C4620CCB7EA004175CC /* MapViewController.swift */; };
 		5B9263C1209E2D650014F61B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C0209E2D650014F61B /* AppDelegate.swift */; };
 		5B9263C3209E2D650014F61B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C2209E2D650014F61B /* ViewController.swift */; };
 		5B9263C6209E2D650014F61B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9263C4209E2D650014F61B /* Main.storyboard */; };
@@ -118,6 +119,7 @@
 		5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoCompras.swift; sourceTree = "<group>"; };
 		5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoComprasCell.swift; sourceTree = "<group>"; };
 		5B0EAACE20A8FC56001E4B24 /* appList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appList.plist; sourceTree = "<group>"; };
+		5B300C4620CCB7EA004175CC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5B9263BD209E2D650014F61B /* Sisma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sisma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9263C0209E2D650014F61B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9263C2209E2D650014F61B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				5B9263C2209E2D650014F61B /* ViewController.swift */,
 				5B92641020A0BE8D0014F61B /* QRCodeView.swift */,
 				5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */,
+				5B300C4620CCB7EA004175CC /* MapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -586,6 +589,8 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
 				"${BUILT_PRODUCTS_DIR}/Cupcake/Cupcake.framework",
+				"${PODS_ROOT}/EstimoteBluetoothScanning/EstimoteBluetoothScanning/EstimoteBluetoothScanning.framework",
+				"${PODS_ROOT}/EstimoteProximitySDK/EstimoteProximitySDK/EstimoteProximitySDK.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
@@ -617,6 +622,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cupcake.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteBluetoothScanning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteProximitySDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
@@ -820,6 +827,7 @@
 				5B92640B20A0B9560014F61B /* QRCodeReaderViewContainer.swift in Sources */,
 				5B0EAAC520A8F49B001E4B24 /* CPKStackView.swift in Sources */,
 				5B92640920A0B9560014F61B /* QRCodeReaderViewControllerDelegate.swift in Sources */,
+				5B300C4720CCB7EA004175CC /* MapViewController.swift in Sources */,
 				5B0EAAC020A8F49B001E4B24 /* Font.swift in Sources */,
 				5B0EAABC20A8F49B001E4B24 /* Img.swift in Sources */,
 				5B92640820A0B9560014F61B /* ToggleTorchButton.swift in Sources */,

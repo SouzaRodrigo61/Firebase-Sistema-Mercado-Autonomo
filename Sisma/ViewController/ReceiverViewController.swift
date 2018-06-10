@@ -44,18 +44,11 @@ class ReceiverViewController: UIViewController
     {
         super.viewDidLoad()
         
-//        self.navigationController?.navigationBar.barTintColor = UIColor.iOS7BlueColor()
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        
         self.location = CLLocationManager()
         self.location!.delegate = self
         self.location!.requestAlwaysAuthorization()
         
-//        let attributes: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.iOS7BlueColor()]
-//        let attributedTitle: NSAttributedString = NSAttributedString(string: "Receiving Beacon", attributes: attributes)
-        
         let refreshControl: UIRefreshControl = UIRefreshControl()
-//        refreshControl.attributedTitle = attributedTitle
         refreshControl.addTarget(self, action: #selector(ReceiverViewController.refreshBeacons), for: UIControlEvents.valueChanged)
         
         self.refreshControl = refreshControl
@@ -146,8 +139,11 @@ extension ReceiverViewController: UITableViewDataSource, UITableViewDelegate
         
         let row: Int = indexPath.row
         let beacon: CLBeacon = self.beacons[row]
-        let detailText: String = "Major: " + "\(beacon.major)" + "\tMinor: " + "\(beacon.minor)"
-        let beaconUUID: String = beacon.proximityUUID.uuidString
+        
+        print("beacon: ", beacon)
+        
+        let detailText: String = "Major: " + "\(beacon.major)" + "\tMinor: " + "\(beacon.minor)" + "\(nameForProximity(beacon.proximity))"
+         let beaconUUID: String = beacon.proximityUUID.uuidString
         
         cell?.textLabel?.text = detailText
         cell?.detailTextLabel?.text = beaconUUID
@@ -160,7 +156,21 @@ extension ReceiverViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath, animated: true)
-    }    
+    }
+    
+    // This returns a string for values of the beacon proximity measure.
+    func nameForProximity(_ proximity: CLProximity) -> String {
+        switch proximity {
+        case .unknown:
+            return "Unknown"
+        case .immediate:
+            return "Immediate"
+        case .near:
+            return "Near"
+        case .far:
+            return "Far"
+        }
+    }
 }
  
 //MARK: - CLocationManager Delegate Methods

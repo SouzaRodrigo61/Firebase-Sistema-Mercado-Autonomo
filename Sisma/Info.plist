@@ -64,7 +64,8 @@
 	<string>Preciso da sua localização</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>bluetooth-central</string>
+		<string>texto</string>
+		<string>texto</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

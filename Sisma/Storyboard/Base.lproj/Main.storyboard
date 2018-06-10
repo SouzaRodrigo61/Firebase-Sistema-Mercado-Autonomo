@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cvq-Mj-52g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cvq-Mj-52g">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -73,9 +73,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pxp-Un-YwF" userLabel="Stack View">
-                                <rect key="frame" x="106" y="64" width="51" height="18"/>
-                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hti-1R-o5q" userLabel="Input Container View">
                                 <rect key="frame" x="8" y="67" width="359" height="44"/>
                                 <subviews>
@@ -134,9 +131,6 @@
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cTV-Zs-v85" firstAttribute="leading" secondItem="80B-L2-JNX" secondAttribute="leading" id="6Ow-n5-5ie"/>
-                            <constraint firstItem="hti-1R-o5q" firstAttribute="top" secondItem="pxp-Un-YwF" secondAttribute="top" constant="3" id="8af-Uq-1wc"/>
-                            <constraint firstItem="e3Z-k9-fTl" firstAttribute="trailing" secondItem="pxp-Un-YwF" secondAttribute="trailing" constant="218" id="8hJ-oD-pKb"/>
-                            <constraint firstItem="cTV-Zs-v85" firstAttribute="top" secondItem="pxp-Un-YwF" secondAttribute="bottom" constant="30" id="9Xj-1Q-yCV"/>
                             <constraint firstItem="cTV-Zs-v85" firstAttribute="leading" secondItem="gpa-JK-dLM" secondAttribute="leading" id="IZe-67-N8w"/>
                             <constraint firstItem="hti-1R-o5q" firstAttribute="centerX" secondItem="80B-L2-JNX" secondAttribute="centerX" id="JgB-Ie-O5k"/>
                             <constraint firstItem="hti-1R-o5q" firstAttribute="centerX" secondItem="cTV-Zs-v85" secondAttribute="centerX" id="LqT-4u-2e5"/>
@@ -145,20 +139,14 @@
                             <constraint firstItem="hti-1R-o5q" firstAttribute="top" secondItem="e3Z-k9-fTl" secondAttribute="top" constant="3" id="egK-jY-3yH"/>
                             <constraint firstItem="cTV-Zs-v85" firstAttribute="bottom" secondItem="e3Z-k9-fTl" secondAttribute="bottom" id="hGX-Re-Rta"/>
                             <constraint firstItem="cTV-Zs-v85" firstAttribute="top" secondItem="hti-1R-o5q" secondAttribute="bottom" constant="1" id="iHa-Y6-1lm"/>
-                            <constraint firstItem="pxp-Un-YwF" firstAttribute="leading" secondItem="e3Z-k9-fTl" secondAttribute="leading" constant="106" id="mAp-iH-5Gn"/>
                             <constraint firstAttribute="trailing" secondItem="hti-1R-o5q" secondAttribute="trailing" constant="8" id="rEc-rF-rcz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e3Z-k9-fTl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Carrinho" image="lista" id="o3B-Od-1Gy">
+                    <tabBarItem key="tabBarItem" title="Carrinho" image="online-shop" id="o3B-Od-1Gy">
                         <color key="badgeColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Carrinho Compras" id="CSe-ws-Pqa">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="credit-card" id="dMV-wt-h0s">
-                            <connections>
-                                <action selector="paymentActionButton:" destination="DhS-P0-Jwl" id="8Uf-Q4-C45"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="qr-code" id="Pr5-xd-HE3">
                             <connections>
                                 <action selector="QRCodeAction:" destination="DhS-P0-Jwl" id="36J-0C-ahO"/>
@@ -174,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZE-na-rae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2737" y="-358"/>
+            <point key="canvasLocation" x="2737" y="-30"/>
         </scene>
         <!--View Controller Consumidor-->
         <scene sceneID="Pxf-1l-VyS">
@@ -186,10 +174,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="l3x-S7-hwK" kind="relationship" relationship="viewControllers" id="Dkz-Az-hka"/>
-                        <segue destination="pHh-8e-DQQ" kind="relationship" relationship="viewControllers" id="gYJ-yV-ydN"/>
-                        <segue destination="Atg-pS-cps" kind="relationship" relationship="viewControllers" id="Vu0-SJ-Zf8"/>
-                        <segue destination="JtS-6a-PUF" kind="relationship" relationship="viewControllers" id="IMv-28-vdH"/>
+                        <segue destination="l3x-S7-hwK" kind="relationship" relationship="viewControllers" id="lxp-Tg-XAy"/>
+                        <segue destination="JtS-6a-PUF" kind="relationship" relationship="viewControllers" id="ikb-Uh-sij"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vI6-bI-vFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2T-cF-ISG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832.8" y="327.88605697151428"/>
+            <point key="canvasLocation" x="1790" y="1478"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="naD-AM-Nce">
@@ -340,7 +326,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTz-xl-EH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="-358"/>
+            <point key="canvasLocation" x="1790" y="-30"/>
         </scene>
         <!--Receiver Navigation-->
         <scene sceneID="NpC-OE-PNE">
@@ -358,7 +344,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZz-DZ-zD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="1021"/>
+            <point key="canvasLocation" x="1790" y="719"/>
         </scene>
         <!--Receiver-->
         <scene sceneID="YO4-Mh-qHR">
@@ -399,16 +385,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypw-2z-6Yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2737" y="1022"/>
+            <point key="canvasLocation" x="2737" y="718"/>
         </scene>
         <!--Localização-->
         <scene sceneID="Ntn-Zq-gFi">
             <objects>
-                <viewController id="JtS-6a-PUF" sceneMemberID="viewController">
+                <viewController id="JtS-6a-PUF" customClass="MapViewController" customModule="Sisma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yCq-N1-A0P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="mutedStandard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Lc-Xo-4Ud">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JtS-6a-PUF" id="jTP-EO-LBM"/>
+                                </connections>
+                            </mapView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Oz-lv-3cF">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
@@ -417,10 +410,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Lc-Xo-4Ud">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -430,14 +419,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BWl-fM-VNo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Localização" image="online-shop" id="Ofh-DN-dIT">
+                    <tabBarItem key="tabBarItem" title="Localização" image="lista" id="Ofh-DN-dIT">
                         <color key="badgeColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="2Lc-Xo-4Ud" id="Y1R-Gt-bj3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mkt-1a-OaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832.8" y="-1110.4947526236883"/>
+            <point key="canvasLocation" x="1790" y="-764"/>
         </scene>
     </scenes>
     <resources>

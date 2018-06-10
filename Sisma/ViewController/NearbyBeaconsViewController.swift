@@ -17,10 +17,7 @@ class NearbyBeaconsViewController: UIViewController {
     @IBOutlet weak var scanLabel: UILabel!
     
     var recentBeacons: [CLBeacon] = [] // This array contains the beacons that will show up in the table.
-    var beaconRegion: CLBeaconRegion =
-        CLBeaconRegion(proximityUUID: UUID.init(uuidString: "7FA08BC7-A55F-45FC-85C0-0BF26F899530")!,
-                       major: 555,
-                       identifier: "winchester") // This specifies which beacons to look for. All beacons at WT have same UUID and major id
+    var beaconRegion: CLBeaconRegion = CLBeaconRegion() // This specifies which beacons to look for. All beacons at WT have same UUID and major id
     var locationManager: CLLocationManager = CLLocationManager() // The location manager handles ranging of beacons.
 
     override func viewDidLoad() {

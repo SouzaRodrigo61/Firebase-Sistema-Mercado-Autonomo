@@ -35,6 +35,7 @@ target 'Sisma' do
   pod 'Alamofire'
   pod 'Stripe'
   
+  pod 'EstimoteProximitySDK'
 
   target 'SismaTests' do
     inherit! :search_paths

@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 class CarrinhoComprasCell: UITableViewCell {
+//    let items = ["-", "+"]
     var iconView: UIImageView!
-    var actionButton: UIButton!
+//    var actionButton: UISegmentedControl!
     var indexLabel, titleLabel, categoryLabel: UILabel!
     var ratingLabel, countLabel, iapLabel: UILabel!
     
@@ -29,7 +30,8 @@ class CarrinhoComprasCell: UITableViewCell {
         ratingLabel.text = result
         
         let price = app["price"] as! Int
-        actionButton.str("Add")
+//        actionButton.selectedSegmentIndex = 0
+//        actionButton.str("Add")
         
         iapLabel.str("R$" + String(price))
     }
@@ -44,14 +46,14 @@ class CarrinhoComprasCell: UITableViewCell {
         ratingLabel = Label.font(11).color("orange")
         countLabel = Label.font(11).color("darkGray")
         
-        actionButton = Button.font("15").color("#0065F7").border(1, "#0065F7").radius(3)
-        actionButton.highColor("white").highBg("#0065F7").padding(5, 10)
+//        actionButton = Button.font("15").color("#0065F7").border(1, "#0065F7").radius(3)
+//        actionButton.highColor("white").highBg("#0065F7").padding(5, 10)
         
-        iapLabel = Label.font(10).color("darkGray").lines(2).align(.center)
+        iapLabel = Label.font(13).color("darkGray").lines(2).align(.center)
         
         let ratingStack = HStack(ratingLabel, countLabel).gap(5)
         let midStack = VStack(titleLabel, categoryLabel, ratingStack).gap(4)
-        let actionStack = VStack(actionButton, iapLabel).gap(4).align(.center)
+        let actionStack = VStack(iapLabel).gap(4).align(.center)
         
         HStack(indexLabel, iconView, 10, midStack, "<-->", 10, actionStack).embedIn(self.contentView, 10, 0, 10, 15)
     }

@@ -6,6 +6,8 @@
 //  Copyright © 2018 Rodrigo. All rights reserved.
 //
 
+import CoreBluetooth
+import CoreLocation
 import FirebaseFirestore
 import AVFoundation
 import StatusAlert
@@ -14,7 +16,10 @@ import Firebase
 import Stripe
 import UIKit
 
-class CarrinhoCompras: UIViewController,QRCodeReaderViewControllerDelegate {
+class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate, CLLocationManagerDelegate {
+    
+    fileprivate var beacons: [CLBeacon] = []
+    fileprivate var location: CLLocationManager = CLLocationManager()
     
     fileprivate let PAYMENT_VIEW_SEGUE_IDENTIFIER = "PaymentView"
     fileprivate let DATA_DOCUMENT_FIRESTORE = "COMPRAS"
@@ -186,9 +191,60 @@ class CarrinhoCompras: UIViewController,QRCodeReaderViewControllerDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         
-//        let path = Bundle.main.path(forResource: "appList", ofType: "plist")
-//        appList = NSArray(contentsOfFile: path!) as? Array<Dictionary<String, Any>>
-//        for _ in 1..<5 { appList.append(contentsOf: appList) }
+        location.delegate = self
+        location.requestWhenInUseAuthorization()
+        
+        
+        // This uuid must same as broadcaster.
+//        let UUID: UUID = iBeaconConfiguration.uuid!
+//        let beaconRegion: CLBeaconRegion = CLBeaconRegion(proximityUUID: UUID, identifier: "tw.darktt.beaconDemo")
+//        self.location.startMonitoring(for: beaconRegion)
+        
+//        let row: Int = indexPath.row
+//        let beacon: CLBeacon = self.beacons[row]
+        
+//        print("beacon: ", self.beacons)
+    }
+    
+    func rangeBeacon(){
+        let uuid = iBeaconConfiguration.uuid!
+        let major:Int = 15
+        let minor:Int = 653
+        let identifier:String = "com.br.projecao.payment"
+        
+        let region = CLBeaconRegion(proximityUUID: uuid, major: CLBeaconMajorValue(major), minor: CLBeaconMinorValue(minor), identifier: identifier)
+        
+        location.startRangingBeacons(in: region)
+    }
+    
+    // mark
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways{
+            rangeBeacon()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+        guard let discoveredBeacon = beacons.first?.proximity else{ print("Não encontrei beacon"); return }
+        
+        print("discoveredBeacon: ", discoveredBeacon)
+        
+        let backgroundColor:UIColor = {
+            switch discoveredBeacon {
+            case .immediate:
+                return UIColor.green
+            case .near:
+                return UIColor.green
+            case .far:
+                return UIColor.red
+            case .unknown:
+                return UIColor.white
+            }
+        }()
+        
+        view.backgroundColor = backgroundColor
+        
     }
     
     override func didReceiveMemoryWarning() {

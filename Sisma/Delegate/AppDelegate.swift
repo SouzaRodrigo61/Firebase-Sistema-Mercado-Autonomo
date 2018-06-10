@@ -14,6 +14,8 @@ import GoogleSignIn
 import Stripe
 import CoreLocation
 
+import EstimoteProximitySDK
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLocationManagerDelegate {
@@ -53,6 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
      */
     private let appleMerchantIdentifier: String = "merchant.xyz"
     
+    
+    // 1. Add a property to hold the Proximity Observer
+    var proximityObserver: EPXProximityObserver!
+    
     override init() {
         super.init()
         
@@ -79,6 +85,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate, CLLoca
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // add this:
+        let cloudCredentials = EPXCloudCredentials(appID: "souza-rodrigo61-gmail-com--5yc",
+                                                   appToken: "7e9b813d24db4e34f79b50df9c0cd59d")
+            
+        // 2. Create the Proximity Observer
+        self.proximityObserver = EPXProximityObserver(
+            credentials: cloudCredentials,
+            errorBlock: { error in
+                print("proximity observer error: \(error)")
+        })
+        
         FirebaseApp.configure()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
