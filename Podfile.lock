@@ -15,9 +15,6 @@ PODS:
   - Cards (1.3.2):
     - Player
   - Cupcake (1.2.2)
-  - EstimoteBluetoothScanning (0.2.0)
-  - EstimoteProximitySDK (0.13.1):
-    - EstimoteBluetoothScanning (~> 0.2.0)
   - FBSDKCoreKit (4.33.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.33.0):
@@ -198,6 +195,11 @@ PODS:
   - GTMSessionFetcher/Core (1.1.15)
   - GTMSessionFetcher/Full (1.1.15):
     - GTMSessionFetcher/Core (= 1.1.15)
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
   - leveldb-library (1.20)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
@@ -231,12 +233,12 @@ PODS:
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
+  - ViewAnimator (2.1.1)
 
 DEPENDENCIES:
   - Alamofire
   - Cards
   - Cupcake
-  - EstimoteProximitySDK
   - FCAlertView
   - Firebase/AdMob
   - Firebase/Analytics
@@ -255,6 +257,7 @@ DEPENDENCIES:
   - FirebaseUI/Facebook
   - FirebaseUI/Google
   - FoldingCell
+  - IGListKit (~> 3.0)
   - Moya (~> 11.0)
   - PromiseKit/CorePromise
   - QRCode
@@ -266,6 +269,7 @@ DEPENDENCIES:
   - Stripe
   - SwiftMessages
   - SwiftyJSON (~> 4.0)
+  - ViewAnimator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -274,8 +278,6 @@ SPEC REPOS:
     - BoringSSL
     - Cards
     - Cupcake
-    - EstimoteBluetoothScanning
-    - EstimoteProximitySDK
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FCAlertView
@@ -305,6 +307,7 @@ SPEC REPOS:
     - gRPC-RxLibrary
     - GTMOAuth2
     - GTMSessionFetcher
+    - IGListKit
     - leveldb-library
     - Moya
     - nanopb
@@ -324,6 +327,7 @@ SPEC REPOS:
     - SwiftyJSON
     - TwitterCore
     - TwitterKit
+    - ViewAnimator
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -331,8 +335,6 @@ SPEC CHECKSUMS:
   BoringSSL: 60dd24df4af296bf41d78e5841dbb95d75f88c0d
   Cards: 69e8c83deebd5ed5bad7062dba603ce76992f712
   Cupcake: 969645a83f52f3e79c3582cb34c61f0f7e847f26
-  EstimoteBluetoothScanning: d44e46ebebe4e0e2696c4577168cb8660b5d4ee9
-  EstimoteProximitySDK: b9523b79842a39f3738b8a2e46d1303e463abd65
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
   FCAlertView: fdddd63381898c1d1a5a20c9f084fbd2c6d12f8b
@@ -362,6 +364,7 @@ SPEC CHECKSUMS:
   gRPC-RxLibrary: 1ed5314e8b38cd6e55c9bfa048387136ae925ce9
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
@@ -381,7 +384,8 @@ SPEC CHECKSUMS:
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
+  ViewAnimator: 43c31539508d995ea2c5e98338211f7c009b358f
 
-PODFILE CHECKSUM: 5cf886ba5ac4a2d8475bb9280e01b3d8a6dea761
+PODFILE CHECKSUM: 7fbca10c161ebd53e3bc71f3490e098d31ab5a32
 
 COCOAPODS: 1.5.2

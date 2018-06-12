@@ -9,107 +9,65 @@
 import Foundation
 import UIKit
 import Firebase
+import ViewAnimator
 
 class ProdutoListaView: UIViewController{
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    let locationNames = ["Hawaii Resort", "Mountain Expedition", "Scuba Diving"]
-    
-    let locationImages = [UIImage(named: "hawaiiResort"), UIImage(named: "mountainExpedition"), UIImage(named: "scubaDiving")]
-    
-    let locationDescription = ["Beautiful resort off the coast of Hawaii", "Exhilarating mountainous expedition through Yosemite National Park", "Awesome Scuba Diving adventure in the Gulf of Mexico"]
-    
-    
-    var produtos: [Produtos] = []
-    
-    func createArray() -> [Produtos]{
-        var tempProdutos: [Produtos] = []
-        
-        let produto0 = Produtos(image: #imageLiteral(resourceName: "scubaDiving"), title: "Maça", textBody: "Beautiful resort off the coast of Hawaii")
-        let produto1 = Produtos(image: #imageLiteral(resourceName: "background"), title: "Maça", textBody: "Exhilarating mountainous expedition through Yosemite National Park")
-        let produto2 = Produtos(image: #imageLiteral(resourceName: "mountainExpedition"), title: "Maça", textBody: "Awesome Scuba Diving adventure in the Gulf of Mexico")
-        tempProdutos.append(produto0)
-        tempProdutos.append(produto1)
-        tempProdutos.append(produto2)
-        
-        return tempProdutos
-    }
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        getQueryOffLineNoWhereCase( data: "dadosProdutos", document: "produtos")
-        
-//        produtos = createArray()
-        
-        collectionView.delegate = self
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
+        
+        tableView.tableFooterView = UIView()
+        tableView.dataSource = self
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func animate() {
+        // Combined animations example
+        let fromAnimation = AnimationType.from(direction: .right, offset: 30.0)
+        let zoomAnimation = AnimationType.zoom(scale: 0.2)
+        let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
+        UIView.animate(views: collectionView.visibleCells,
+                       animations: [zoomAnimation, rotateAnimation],
+                       duration: 0.5)
+        
+        UIView.animate(views: tableView.visibleCells,
+                       animations: [fromAnimation, zoomAnimation], delay: 0.5)
     }
-    
-    func getQueryOffLineNoWhereCase(data: String, document: String) {
-        
-        let db = Firestore.firestore()
-        
-        // Listen to metadata updates to receive a server snapshot even if
-        // the data is the same as the cached data.
-        
-        db.collection(data)
-            .addSnapshotListener { querySnapshot, error in
-                guard let snapshot = querySnapshot else {
-                    print("Error retreiving snapshot: \(error!)")
-                    return
-                }
-                
-                for diff in snapshot.documentChanges {
-                    let dictionary = diff.document.data()
-                    
-                    let title = dictionary["title"] as? String
-                    let textBody = dictionary["textBody"] as? String
-                    self.produtos.append(Produtos(image: #imageLiteral(resourceName: "hawaiiResort"), title: title!, textBody: textBody!))
-                    
-                }
-                
-                let source = snapshot.metadata.isFromCache ? "local cache" : "server"
-                print("Metadata: Data fetched from \(source)")
-                
-                self.collectionView.reloadData()
-        }
-    }
-
 }
 
-extension ProdutoListaView: UICollectionViewDelegate, UICollectionViewDataSource{
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return produtos.count
+extension ProdutoListaView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let produto = produtos[indexPath.row]
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        
-        cell.setProduto(produto)
-        
-        //This creates the shadows and modifies the cards a little bit
-        cell.contentView.layer.cornerRadius = 6.0
-        cell.contentView.layer.borderWidth = 2.0
-        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        cell.layer.shadowRadius = 6.0
-        cell.layer.shadowOpacity = 1.0
-        cell.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius:
-        cell.contentView.layer.cornerRadius).cgPath
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TableViewCell
+        cell.userImageView.image = UIImage(named: "\(indexPath.row)")
         return cell
     }
 }
 
+extension ProdutoListaView: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        cell.backgroundColor = UIColor.red
+        cell.layer.cornerRadius = 5.0
+//        cell.imageView.image = UIImage(named: "\(indexPath.item)")
+        return cell
+    }
+}

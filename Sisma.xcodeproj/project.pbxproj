@@ -28,6 +28,8 @@
 		5B0EAACB20A8F504001E4B24 /* CarrinhoCompras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */; };
 		5B0EAACD20A8F530001E4B24 /* CarrinhoComprasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */; };
 		5B0EAACF20A8FC56001E4B24 /* appList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B0EAACE20A8FC56001E4B24 /* appList.plist */; };
+		5B19772720D0308700642A7C /* CollectionProdutosViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B19772620D0308700642A7C /* CollectionProdutosViewCell.swift */; };
+		5B19772920D030AC00642A7C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B19772820D030AC00642A7C /* TableViewCell.swift */; };
 		5B300C4720CCB7EA004175CC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B300C4620CCB7EA004175CC /* MapViewController.swift */; };
 		5B9263C1209E2D650014F61B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C0209E2D650014F61B /* AppDelegate.swift */; };
 		5B9263C3209E2D650014F61B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9263C2209E2D650014F61B /* ViewController.swift */; };
@@ -49,7 +51,6 @@
 		5B92640B20A0B9560014F61B /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92640120A0B9560014F61B /* QRCodeReaderViewContainer.swift */; };
 		5B92640C20A0B9560014F61B /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92640220A0B9560014F61B /* QRCodeReaderView.swift */; };
 		5B92640F20A0BA9C0014F61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B92640E20A0BA9C0014F61B /* LaunchScreen.storyboard */; };
-		5B92641120A0BE8D0014F61B /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92641020A0BE8D0014F61B /* QRCodeView.swift */; };
 		5B92641C20A231740014F61B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92641B20A231740014F61B /* CollectionViewCell.swift */; };
 		5B92641E20A232880014F61B /* Produtos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92641D20A232880014F61B /* Produtos.swift */; };
 		5B92642220A233AD0014F61B /* ProdutoListaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B92642120A233AD0014F61B /* ProdutoListaView.swift */; };
@@ -67,8 +68,6 @@
 		5BEA791C20B0CD86003285A2 /* UITabBarControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA791920B0CD86003285A2 /* UITabBarControllerExtension.swift */; };
 		5BEA791D20B0CD86003285A2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA791A20B0CD86003285A2 /* UIColorExtension.swift */; };
 		5BEA791E20B0CD86003285A2 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA791B20B0CD86003285A2 /* UINavigationControllerExtension.swift */; };
-		5BEA792020B0CD95003285A2 /* ReceiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA791F20B0CD95003285A2 /* ReceiverViewController.swift */; };
-		5BEA792C20B0F742003285A2 /* NearbyBeaconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA792B20B0F741003285A2 /* NearbyBeaconsViewController.swift */; };
 		9FEDF2F41BF643DC9085FE02 /* Pods_SismaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E86BC59913DA5C436CECDE /* Pods_SismaTests.framework */; };
 		A1C5ADF43F92C352CBACD392 /* Pods_SismaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2330E25AEBB1B94C7ADFEC3E /* Pods_SismaUITests.framework */; };
 		D2A6A3FF359A76A50387E679 /* Pods_Sisma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B0FD0F7A0D66C378B5A4C0 /* Pods_Sisma.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -119,6 +118,8 @@
 		5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoCompras.swift; sourceTree = "<group>"; };
 		5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrinhoComprasCell.swift; sourceTree = "<group>"; };
 		5B0EAACE20A8FC56001E4B24 /* appList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appList.plist; sourceTree = "<group>"; };
+		5B19772620D0308700642A7C /* CollectionProdutosViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionProdutosViewCell.swift; sourceTree = "<group>"; };
+		5B19772820D030AC00642A7C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		5B300C4620CCB7EA004175CC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5B9263BD209E2D650014F61B /* Sisma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sisma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9263C0209E2D650014F61B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +147,6 @@
 		5B92640120A0B9560014F61B /* QRCodeReaderViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewContainer.swift; sourceTree = "<group>"; };
 		5B92640220A0B9560014F61B /* QRCodeReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderView.swift; sourceTree = "<group>"; };
 		5B92640E20A0BA9C0014F61B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5B92641020A0BE8D0014F61B /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		5B92641B20A231740014F61B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		5B92641D20A232880014F61B /* Produtos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produtos.swift; sourceTree = "<group>"; };
 		5B92642120A233AD0014F61B /* ProdutoListaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoListaView.swift; sourceTree = "<group>"; };
@@ -166,8 +166,6 @@
 		5BEA791920B0CD86003285A2 /* UITabBarControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtension.swift; sourceTree = "<group>"; };
 		5BEA791A20B0CD86003285A2 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5BEA791B20B0CD86003285A2 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
-		5BEA791F20B0CD95003285A2 /* ReceiverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverViewController.swift; sourceTree = "<group>"; };
-		5BEA792B20B0F741003285A2 /* NearbyBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyBeaconsViewController.swift; sourceTree = "<group>"; };
 		64003054E5B5DBCD24386251 /* Pods-SismaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SismaUITests/Pods-SismaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		70948ACC3D0DABFF5C5D88D9 /* Pods-SismaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SismaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests.release.xcconfig"; sourceTree = "<group>"; };
 		783862920D3CD090FE9EC528 /* Pods-Sisma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sisma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sisma/Pods-Sisma.debug.xcconfig"; sourceTree = "<group>"; };
@@ -311,11 +309,8 @@
 		5B92641820A230DA0014F61B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5BEA792B20B0F741003285A2 /* NearbyBeaconsViewController.swift */,
-				5BEA791F20B0CD95003285A2 /* ReceiverViewController.swift */,
 				5B92642120A233AD0014F61B /* ProdutoListaView.swift */,
 				5B9263C2209E2D650014F61B /* ViewController.swift */,
-				5B92641020A0BE8D0014F61B /* QRCodeView.swift */,
 				5B0EAACA20A8F504001E4B24 /* CarrinhoCompras.swift */,
 				5B300C4620CCB7EA004175CC /* MapViewController.swift */,
 			);
@@ -325,6 +320,7 @@
 		5B92641920A230F10014F61B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B19772820D030AC00642A7C /* TableViewCell.swift */,
 				5B92642320A2400D0014F61B /* RemoveProdutos.swift */,
 				5B9263F3209EA3FA0014F61B /* RoundButton.swift */,
 				5B92641B20A231740014F61B /* CollectionViewCell.swift */,
@@ -332,6 +328,7 @@
 				5B92642B20A3460D0014F61B /* DAO.swift */,
 				5B92642D20A3CFF80014F61B /* CardView.swift */,
 				5B0EAACC20A8F530001E4B24 /* CarrinhoComprasCell.swift */,
+				5B19772620D0308700642A7C /* CollectionProdutosViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -589,8 +586,6 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
 				"${BUILT_PRODUCTS_DIR}/Cupcake/Cupcake.framework",
-				"${PODS_ROOT}/EstimoteBluetoothScanning/EstimoteBluetoothScanning/EstimoteBluetoothScanning.framework",
-				"${PODS_ROOT}/EstimoteProximitySDK/EstimoteProximitySDK/EstimoteProximitySDK.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
@@ -608,6 +603,7 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -622,8 +618,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cupcake.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteBluetoothScanning.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteProximitySDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
@@ -641,6 +635,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -693,6 +688,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SismaTests/Pods-SismaTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -702,6 +698,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -779,9 +776,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B92640420A0B9560014F61B /* QRCodeReaderViewControllerBuilder.swift in Sources */,
+				5B19772720D0308700642A7C /* CollectionProdutosViewCell.swift in Sources */,
 				5B92640520A0B9560014F61B /* ReaderOverlayView.swift in Sources */,
 				5B0EAAC920A8F49B001E4B24 /* ImageView.swift in Sources */,
-				5BEA792020B0CD95003285A2 /* ReceiverViewController.swift in Sources */,
 				5B0EAABE20A8F49B001E4B24 /* View.swift in Sources */,
 				5B92640A20A0B9560014F61B /* SwitchCameraButton.swift in Sources */,
 				5B0EAAB920A8F49B001E4B24 /* Alert.swift in Sources */,
@@ -789,13 +786,11 @@
 				5BEA788620AF4461003285A2 /* UIAlertController+Utility.swift in Sources */,
 				5B92641C20A231740014F61B /* CollectionViewCell.swift in Sources */,
 				5BEA791820B0CD79003285A2 /* Configuration.swift in Sources */,
-				5BEA792C20B0F742003285A2 /* NearbyBeaconsViewController.swift in Sources */,
 				5B0EAAB820A8F49B001E4B24 /* Stack.swift in Sources */,
 				5B92642C20A3460E0014F61B /* DAO.swift in Sources */,
 				5B92642420A2400D0014F61B /* RemoveProdutos.swift in Sources */,
 				5B0EAABB20A8F49B001E4B24 /* Str.swift in Sources */,
 				5BEA791E20B0CD86003285A2 /* UINavigationControllerExtension.swift in Sources */,
-				5B92641120A0BE8D0014F61B /* QRCodeView.swift in Sources */,
 				5B92642E20A3CFF80014F61B /* CardView.swift in Sources */,
 				5BEA791D20B0CD86003285A2 /* UIColorExtension.swift in Sources */,
 				5B0EAAC820A8F49B001E4B24 /* Color.swift in Sources */,
@@ -810,6 +805,7 @@
 				5B0EAAC420A8F49B001E4B24 /* AttStr.swift in Sources */,
 				5BEA788420AF4461003285A2 /* RocketPathOverlay.swift in Sources */,
 				5BEA788520AF4461003285A2 /* UIColor+Palette.swift in Sources */,
+				5B19772920D030AC00642A7C /* TableViewCell.swift in Sources */,
 				5B0EAAC720A8F49B001E4B24 /* __Private__Implementations__.swift in Sources */,
 				5BEA788A20AF44EB003285A2 /* PaymentAPIClient.swift in Sources */,
 				5B9263C1209E2D650014F61B /* AppDelegate.swift in Sources */,
@@ -1000,6 +996,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z42V6W967K;
 				INFOPLIST_FILE = Sisma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1019,6 +1016,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z42V6W967K;
 				INFOPLIST_FILE = Sisma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

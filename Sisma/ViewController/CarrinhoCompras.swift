@@ -22,7 +22,8 @@ class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate, CLL
     fileprivate var location: CLLocationManager = CLLocationManager()
     
     fileprivate let PAYMENT_VIEW_SEGUE_IDENTIFIER = "PaymentView"
-    fileprivate let DATA_DOCUMENT_FIRESTORE = "COMPRAS"
+    fileprivate let DATA_DOCUMENT_FIRESTORE_CARRINHO = "CARRINHO"
+    fileprivate let DATA_DOCUMENT_FIRESTORE_FINALIZA = "COMPROU"
     
     private let customerContext: STPCustomerContext
     private let paymentContext: STPPaymentContext
@@ -30,49 +31,20 @@ class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate, CLL
     @IBOutlet var paymentButton: UIButton!
     @IBOutlet var priceButton: UIButton!
     
+    @IBOutlet weak var QRCodeButton: UIBarButtonItem!
+    
+    private var pagamentoRealizado = false
+    
+    
     @IBAction func paymentButton(_ sender: Any) {
-        let now = NSDate()
-        let nowTimeStamp = getCurrentTimeStamp(now)
-        
-        let user = Auth.auth().currentUser
-        
-        if let user = user{
-            let uid = user.uid
-            
-            let data = (DATA_DOCUMENT_FIRESTORE + "_" + uid + "_" + nowTimeStamp)
-            
-            for produto in appList {
-                DAO().adicionaDados(docData: produto, data: data, document: (produto["title"] as? String)!)
-            }
-            
-            //            performSegue(withIdentifier: PAYMENT_VIEW_SEGUE_IDENTIFIER, sender: appList)
-            presentPaymentMethodsViewController()
-            //            statusAlert.showInKeyWindow()
-        }
+        presentPaymentMethodsViewController()
     }
     @IBAction func priceButton(_ sender: Any) {
-        let now = NSDate()
-        let nowTimeStamp = getCurrentTimeStamp(now)
-        
-        let user = Auth.auth().currentUser
-        
-        if let user = user{
-            let uid = user.uid
-            
-            let data = (DATA_DOCUMENT_FIRESTORE + "_" + uid + "_" + nowTimeStamp)
-            
-            for produto in appList {
-                DAO().adicionaDados(docData: produto, data: data, document: (produto["title"] as? String)!)
-            }
-            
-            //            performSegue(withIdentifier: PAYMENT_VIEW_SEGUE_IDENTIFIER, sender: appList)
-            presentPaymentMethodsViewController()
-            //            statusAlert.showInKeyWindow()
-        }
+        presentPaymentMethodsViewController()
     }
     
     let statusAlert = StatusAlert.instantiate(
-        withImage: UIImage(named: "online-shop"),
+        withImage: UIImage(named: ""),
         title: "Pagamento realizado com sucesso",
         message: "",
         canBePickedOrDismissed: true)
@@ -90,11 +62,7 @@ class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate, CLL
     
     
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBAction func paymentActionButton(_ sender: Any) {
-        statusAlert.showInKeyWindow()
-        
-    }
+
     
     private func presentPaymentMethodsViewController() {
         guard !STPPaymentConfiguration.shared().publishableKey.isEmpty else {
@@ -193,17 +161,6 @@ class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate, CLL
         
         location.delegate = self
         location.requestWhenInUseAuthorization()
-        
-        
-        // This uuid must same as broadcaster.
-//        let UUID: UUID = iBeaconConfiguration.uuid!
-//        let beaconRegion: CLBeaconRegion = CLBeaconRegion(proximityUUID: UUID, identifier: "tw.darktt.beaconDemo")
-//        self.location.startMonitoring(for: beaconRegion)
-        
-//        let row: Int = indexPath.row
-//        let beacon: CLBeacon = self.beacons[row]
-        
-//        print("beacon: ", self.beacons)
     }
     
     func rangeBeacon(){
@@ -226,19 +183,54 @@ class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate, CLL
     }
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-        guard let discoveredBeacon = beacons.first?.proximity else{ print("Não encontrei beacon"); return }
-        
-        print("discoveredBeacon: ", discoveredBeacon)
+        guard let discoveredBeacon = beacons.first?.proximity else{
+            QRCodeButton.isEnabled = false
+            print("Não encontrei beacon");
+            return
+        }
         
         let backgroundColor:UIColor = {
             switch discoveredBeacon {
             case .immediate:
+                QRCodeButton.isEnabled = true
+                pagamentoRealizado = false
                 return UIColor.green
             case .near:
+                QRCodeButton.isEnabled = true
+                pagamentoRealizado = false
                 return UIColor.green
             case .far:
+                QRCodeButton.isEnabled = true
+                pagamentoRealizado = false
                 return UIColor.red
             case .unknown:
+                QRCodeButton.isEnabled = false
+                if(precoProdutos > 0 && pagamentoRealizado == false){
+                    QRCodeButton.isEnabled = false
+                    pagamentoRealizado = true
+                    let now = NSDate()
+                    let nowTimeStamp = getCurrentTimeStamp(now)
+                    let user = Auth.auth().currentUser
+                    
+                    if let user = user{
+                        let uid = user.uid
+                        let data = (DATA_DOCUMENT_FIRESTORE_FINALIZA + "_" + uid + "_" + nowTimeStamp)
+                        for produto in appList {
+                            DAO().adicionaDados(docData: produto, data: data, document: (produto["title"] as? String)!)
+                        }
+                    }
+                    
+                    appList.removeAll()
+                    tableView.reloadData()
+                    
+                    let alertController = UIAlertController(title: "Loyal market", message:
+                        "Compra realizada com sucesso. Volte sempre!", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+                precoProdutos = 0
+                reloadPriceButtonContent()
                 return UIColor.white
             }
         }()
@@ -360,7 +352,18 @@ extension CarrinhoCompras {
                 self.appList.append(dictionary)
                 self.tableView.reloadData()
                 self.reloadPriceButtonContent()
-//                DAO().adicionaDados(docData: (jsonObject as? [String: Any])!, data: "CarrinhoCompras", document: identification)
+                
+                let now = NSDate()
+                let nowTimeStamp = getCurrentTimeStamp(now)
+                let user = Auth.auth().currentUser
+                
+                if let user = user{
+                    let uid = user.uid
+                    let data = (DATA_DOCUMENT_FIRESTORE_CARRINHO + "_" + uid + "_" + nowTimeStamp)
+                    for produto in appList {
+                        DAO().adicionaDados(docData: produto, data: data, document: (produto["title"] as? String)!)
+                    }
+                }
             }
         }
     }
@@ -473,24 +476,7 @@ extension CarrinhoCompras: STPPaymentContextDelegate{
     }
     
     public func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPErrorBlock) {
-        let source = paymentResult.source.stripeID
-        
-//        PaymentAPIClient.shared.requestRide(source: source, amount: price, currency: "usd") { [weak self] (ride, error) in
-//            guard let strongSelf = self else {
-//                // View controller was deallocated
-//                return
-//            }
-//
-//            guard error == nil else {
-//                // Error while requesting ride
-//                completion(error)
-//                return
-//            }
-//
-//            // Save ride info to display after payment finished
-//            strongSelf.rideRequestState = .active(ride!)
-//            completion(nil)
-//        }
+        _ = paymentResult.source.stripeID
     }
     
     public func paymentContext(_ paymentContext: STPPaymentContext, didUpdateShippingAddress address: STPAddress, completion: @escaping STPShippingMethodsCompletionBlock) {

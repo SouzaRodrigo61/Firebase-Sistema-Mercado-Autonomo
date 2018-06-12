@@ -34,13 +34,13 @@ target 'Sisma' do
   pod 'Cupcake'
   pod 'Alamofire'
   pod 'Stripe'
-  
-  pod 'EstimoteProximitySDK'
+  pod 'ViewAnimator'
 
   target 'SismaTests' do
     inherit! :search_paths
     # Pods for testing
     
+    pod 'IGListKit',     '~>  3.0'
     pod 'Moya',          '~> 11.0'
     pod 'SwiftyJSON',    '~>  4.0'
     pod 'RxSwift',       '~>  4.0'
