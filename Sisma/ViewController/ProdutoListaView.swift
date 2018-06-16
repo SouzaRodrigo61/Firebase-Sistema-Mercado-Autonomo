@@ -15,20 +15,28 @@ class ProdutoListaView: UIViewController{
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
+    let fromAnimation = AnimationType.from(direction: .right, offset: 30.0)
+    let zoomAnimation = AnimationType.zoom(scale: 0.2)
+    let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIView.animate(views: collectionView.visibleCells,
+                       animations: [zoomAnimation, rotateAnimation],
+                       duration: 0.5)
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.dataSource = self
         
+        UIView.animate(views: tableView.visibleCells,
+                       animations: [fromAnimation, zoomAnimation], delay: 0.5)
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
     }
     
     @IBAction func animate() {
         // Combined animations example
-        let fromAnimation = AnimationType.from(direction: .right, offset: 30.0)
-        let zoomAnimation = AnimationType.zoom(scale: 0.2)
-        let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
+        
         UIView.animate(views: collectionView.visibleCells,
                        animations: [zoomAnimation, rotateAnimation],
                        duration: 0.5)
@@ -49,7 +57,7 @@ extension ProdutoListaView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TableViewCell
-        cell.userImageView.image = UIImage(named: "\(indexPath.row)")
+        cell.userImageView.image = #imageLiteral(resourceName: "bitmoji")
         return cell
     }
 }
@@ -67,7 +75,7 @@ extension ProdutoListaView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         cell.backgroundColor = UIColor.red
         cell.layer.cornerRadius = 5.0
-//        cell.imageView.image = UIImage(named: "\(indexPath.item)")
+        cell.imageView.image = #imageLiteral(resourceName: "mario")
         return cell
     }
 }

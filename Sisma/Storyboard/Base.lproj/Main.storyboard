@@ -14,8 +14,8 @@
         <scene sceneID="mlH-l4-CfN">
             <objects>
                 <navigationController id="cvq-Mj-52g" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FCI-M6-OWI">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="FCI-M6-OWI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80B-L2-JNX">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Carrinho de Compras" id="o3m-mp-JE4">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="credit-card" id="xgo-Aa-C6S">
@@ -59,7 +59,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hti-1R-o5q" userLabel="Input Container View">
-                                <rect key="frame" x="8" y="67" width="359" height="44"/>
+                                <rect key="frame" x="8" y="119" width="359" height="44"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="p6X-qi-wAa">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="44"/>
@@ -113,7 +113,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cTV-Zs-v85">
-                                <rect key="frame" x="0.0" y="112" width="375" height="506"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="454"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -163,21 +163,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZE-na-rae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2737" y="-30"/>
+            <point key="canvasLocation" x="2737" y="1012"/>
         </scene>
         <!--View Controller Consumidor-->
         <scene sceneID="Pxf-1l-VyS">
             <objects>
-                <tabBarController storyboardIdentifier="LoginViewer" title="View Controller Consumidor" id="kp8-Nf-YBr" customClass="ViewControllerLogin" customModule="Sisma" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="LoginViewer" title="View Controller Consumidor" id="kp8-Nf-YBr" customClass="RAMAnimatedTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C9E-RE-8hx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="l3x-S7-hwK" kind="relationship" relationship="viewControllers" id="lxp-Tg-XAy"/>
-                        <segue destination="JtS-6a-PUF" kind="relationship" relationship="viewControllers" id="ikb-Uh-sij"/>
-                        <segue destination="Ief-Zn-Ivd" kind="relationship" relationship="viewControllers" id="0yL-Rm-RYn"/>
+                        <segue destination="l3x-S7-hwK" kind="relationship" relationship="viewControllers" id="dbg-i3-aLk"/>
+                        <segue destination="JtS-6a-PUF" kind="relationship" relationship="viewControllers" id="o9n-ON-RvE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vI6-bI-vFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,37 +191,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shopping-3" translatesAutoresizingMaskIntoConstraints="NO" id="O2g-lT-2M8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="409"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgr" translatesAutoresizingMaskIntoConstraints="NO" id="dfO-2v-vzZ">
+                                <rect key="frame" x="67" y="125" width="240" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018 Rodrigo. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="RT4-H6-UCf">
-                                <rect key="frame" x="0.0" y="626.5" width="375" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firebase Sisma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6b-rY-EwN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loyal Market" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJn-vp-vKh">
                                 <rect key="frame" x="79" y="399" width="217" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by Rodrigo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3c-aw-jwH">
-                                <rect key="frame" x="79" y="423" width="217" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80392156859999997" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="RT4-H6-UCf" secondAttribute="bottom" constant="20" id="BXH-96-j64"/>
-                            <constraint firstItem="RT4-H6-UCf" firstAttribute="leading" secondItem="0jG-D4-hcu" secondAttribute="leading" symbolic="YES" id="NCf-1P-gf5"/>
-                            <constraint firstItem="0jG-D4-hcu" firstAttribute="centerX" secondItem="RT4-H6-UCf" secondAttribute="centerX" id="ULa-I7-YLo"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="0jG-D4-hcu"/>
                     </view>
                     <navigationItem key="navigationItem" id="TNL-Sl-vlF"/>
@@ -231,13 +212,13 @@
             </objects>
             <point key="canvasLocation" x="158" y="-30"/>
         </scene>
-        <!--Item-->
+        <!--Carrinho-->
         <scene sceneID="vGf-sk-x6a">
             <objects>
                 <navigationController id="l3x-S7-hwK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0bf-nt-qTn"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vv1-VO-maK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <tabBarItem key="tabBarItem" title="Carrinho" image="online-shop" id="0bf-nt-qTn" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Vv1-VO-maK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -246,9 +227,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTz-xl-EH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="-30"/>
+            <point key="canvasLocation" x="1790" y="427"/>
         </scene>
-        <!--Localização-->
+        <!--Mapa-->
         <scene sceneID="Ntn-Zq-gFi">
             <objects>
                 <viewController id="JtS-6a-PUF" customClass="MapViewController" customModule="Sisma" customModuleProvider="target" sceneMemberID="viewController">
@@ -263,8 +244,8 @@
                                     <outlet property="delegate" destination="JtS-6a-PUF" id="jTP-EO-LBM"/>
                                 </connections>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Oz-lv-3cF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Oz-lv-3cF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                                 <items>
                                     <navigationItem title="Localizacao" id="kgR-ko-2hu">
                                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="49M-Vt-VJe"/>
@@ -280,8 +261,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sM4-Mx-ium"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Localização" image="lista" id="Ofh-DN-dIT">
-                        <color key="badgeColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="lista" id="Ofh-DN-dIT" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <color key="badgeColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" red="1" green="0.80392156859999997" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -290,9 +276,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mkt-1a-OaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="-764"/>
+            <point key="canvasLocation" x="1790" y="-452"/>
         </scene>
-        <!--Full View-->
+        <!--Loja online-->
         <scene sceneID="omm-5v-kVA">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="Ief-Zn-Ivd" customClass="ProdutoListaView" customModule="Sisma" customModuleProvider="target" sceneMemberID="viewController">
@@ -359,7 +345,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoR-23-Sou">
-                                <rect key="frame" x="0.0" y="319" width="375" height="299"/>
+                                <rect key="frame" x="0.0" y="319" width="375" height="348"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="69" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -438,7 +424,7 @@
                             <constraint firstItem="QH9-ZA-RQZ" firstAttribute="top" secondItem="9aK-66-v16" secondAttribute="bottom" id="bqk-jh-1WY"/>
                             <constraint firstItem="aHJ-lU-KQd" firstAttribute="leading" secondItem="fCs-Xx-EuQ" secondAttribute="leading" id="dVU-zr-kCm"/>
                             <constraint firstItem="aHJ-lU-KQd" firstAttribute="top" secondItem="QH9-ZA-RQZ" secondAttribute="bottom" constant="15" id="dWJ-k0-cYM"/>
-                            <constraint firstItem="fCs-Xx-EuQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xp4-ys-rgg" secondAttribute="trailing" constant="20" symbolic="YES" id="hzR-rB-zDz"/>
+                            <constraint firstItem="fCs-Xx-EuQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xp4-ys-rgg" secondAttribute="trailing" symbolic="YES" id="hzR-rB-zDz"/>
                             <constraint firstItem="QH9-ZA-RQZ" firstAttribute="leading" secondItem="9aK-66-v16" secondAttribute="leading" id="ioG-aj-OCb"/>
                             <constraint firstItem="fCs-Xx-EuQ" firstAttribute="trailing" secondItem="aHJ-lU-KQd" secondAttribute="trailing" id="kKJ-x6-D8d"/>
                             <constraint firstItem="fCs-Xx-EuQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QH9-ZA-RQZ" secondAttribute="trailing" constant="20" symbolic="YES" id="nlk-Ji-eFV"/>
@@ -448,7 +434,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fCs-Xx-EuQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Full View" id="6Qw-BU-zeG"/>
+                    <tabBarItem key="tabBarItem" title="Loja online" image="online-shop" id="6Qw-BU-zeG" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <navigationItem key="navigationItem" id="C7U-nj-K7z"/>
                     <connections>
                         <outlet property="collectionView" destination="aHJ-lU-KQd" id="JPU-Xi-qHf"/>
@@ -457,16 +443,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmu-bH-jhq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="730"/>
+            <point key="canvasLocation" x="2737" y="-30"/>
         </scene>
     </scenes>
     <resources>
         <image name="Payment" width="26" height="18"/>
         <image name="Price" width="22" height="22"/>
+        <image name="backgr" width="512" height="512"/>
         <image name="credit-card" width="32" height="32"/>
         <image name="lista" width="32" height="32"/>
         <image name="online-shop" width="32" height="32"/>
         <image name="qr-code" width="32" height="32"/>
-        <image name="shopping-3" width="900" height="899"/>
     </resources>
 </document>

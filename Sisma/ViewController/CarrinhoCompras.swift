@@ -50,7 +50,6 @@ class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate, CLL
         canBePickedOrDismissed: true)
     
     var appList: Array<Dictionary<String, Any>> = []
-    var produtos : [Produtos] = []
     var precoProdutos : Int = 0;
     
     private var price = 0 {
@@ -124,14 +123,7 @@ class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate, CLL
     }
     
     func getCurrentTimeStamp(_ date: NSDate) -> String{
-        
-        let objDateFormat : DateFormatter = DateFormatter()
-        objDateFormat.dateFormat = "dd-MM-yyyy"
-        let strTime: String = objDateFormat.string(from: date as Date)
-        let objUTCDate: NSDate = objDateFormat.date(from: strTime)! as NSDate
-        let milleSecond: Int64 = Int64(objUTCDate.timeIntervalSince1970)
-        let timeStamp: String = "\(milleSecond)"
-        return timeStamp
+        return String(UInt64((date.timeIntervalSince1970 + 62_135_567_800) * 10_000_000))
     }
     
     
@@ -177,6 +169,7 @@ class CarrinhoCompras: UIViewController, QRCodeReaderViewControllerDelegate, CLL
     // mark
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        print("status: ", status)
         if status == .authorizedAlways{
             rangeBeacon()
         }
@@ -338,6 +331,7 @@ extension CarrinhoCompras {
         let prettyJsonData = try! JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
         let json = NSString(data: prettyJsonData, encoding: String.Encoding.utf8.rawValue)! as String
         
+        print("jsonString: ", jsonString)
         print("JsonObject: ", jsonObject)
         print("prettyJsonData: ", prettyJsonData)
         print("json: ", json)

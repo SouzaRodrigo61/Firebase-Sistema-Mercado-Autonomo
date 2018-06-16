@@ -12,16 +12,19 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell{
     
     
-    @IBOutlet weak var produtosImageView: UIImageView!
-    @IBOutlet weak var titleLabelView: UILabel!
-    @IBOutlet weak var textLabelView: UILabel!
+    lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.clipsToBounds = true
+        return imageView
+    }()
     
-    
-    
-    func setProduto(_ produto: Produtos){
-        produtosImageView.image = produto.imageView
-        titleLabelView.text = produto.title
-        textLabelView.text = produto.textBody
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if imageView.superview == nil {
+            imageView.frame = bounds
+            imageView.layer.cornerRadius = layer.cornerRadius
+            addSubview(imageView)
+        }
     }
     
 }
