@@ -34,6 +34,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         //3
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
+
         annotation.title = "Fort Atacadista"
         annotation.subtitle = "Distrito Federal"
         mapView.addAnnotation(annotation)
@@ -102,6 +103,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if currentLocation == nil {
             // Zoom to user location
             if let userLocation = locations.last {
+                print("User Location Coordinate:", userLocation.coordinate)
                 let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000, 2000)
                 mapView.setRegion(viewRegion, animated: true)
             }
